@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.ipynb_checkpoints/
+# model output cache lives on the GPU box; only summaries are committed
+cache/
+results/raw/*.jsonl.gz
+# latex build files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
