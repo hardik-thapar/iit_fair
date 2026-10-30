@@ -11,10 +11,13 @@ Every number below comes from `results/key_numbers.md`, which names its source f
   2 templates × English/Hindi = 6,600 decision prompts per model.
 - **Models:** 8 official open-weight models: Qwen3 at 4B, 8B, 14B and 32B, Granite-3.3-8B,
   OLMo-3-7B, Ministral-8B and Sarvam-M-24B. The judge is Mistral-Small-24B.
-- **Compute:** 109.9 GPU-minutes (1.83 h) on one MI300X, against a 5 h budget. Every job is logged
-  in `logs/gpu_budget.csv`.
-- **Reviews:** Reviewer 2 ran four times, on the literature review, the spec, the results and the
-  draft. The reviews are in `reviews/`.
+- **Compute:** 131.6 GPU-minutes (2.19 h) on one MI300X, against a 5 h budget. This includes a
+  positive-control run that states identity explicitly. Every job is logged in
+  `logs/gpu_budget.csv`.
+- **Reviews:** Reviewer 2 ran four times, on the literature review, the spec, the results and
+  draft 1. Draft 1 got a weak reject; the fix was the positive control plus calibrated claims.
+  An independent fact-check found 33 issues in draft 1, all addressed. In the final draft,
+  308 of 308 distinct numbers trace to a results file. All reviews are in `reviews/`.
 
 ## Key findings
 1. **RQ1, small but systematic shifts.** All 64 attribute×model mean shifts are within 2.16
@@ -33,7 +36,13 @@ Every number below comes from `results/key_numbers.md`, which names its source f
 4. **RQ3b: self-prediction is uninformative.** Near the decision threshold, models predict their
    own counterfactual flips at chance (AUROC 0.43–0.59). Predicted-change rates range from 0.2% to
    39.5% across models and are similar for identity and control swaps.
-5. **RQ2 and RQ4 are mostly null.** For language, 5 of 64 Hindi-vs-English differences are
+5. **Positive control (identity stated explicitly, no name).** Explicit caste labels move
+   decisions strongly: up to +9.72 points, and every caste flip goes to "Yes" (SC 51:0,
+   OBC 34:0). Explanations name explicit caste labels on average 15–26% of the time. So the
+   caste null with surnames reflects non-perception, and the silence under names is
+   informative. Explicit gender still flips decisions toward "Yes" (35:1) yet is almost never
+   mentioned.
+6. **RQ2 and RQ4 are mostly null.** For language, 5 of 64 Hindi-vs-English differences are
    significant and 34 of 64 have 95% CIs inside ±2 points. For scale, Qwen3 shows no monotone
    trend from 4B to 32B.
 
@@ -65,4 +74,4 @@ Every number below comes from `results/key_numbers.md`, which names its source f
 - Anything else marked `\TODO` in `paper/main.tex`. Search for "TODO".
 
 ## GPU hours used
-109.9 minutes (1.83 h) of the 5 h budget.
+131.6 minutes (2.19 h) of the 5 h budget.
