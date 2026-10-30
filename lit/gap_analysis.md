@@ -48,6 +48,24 @@ turpin2023language show biased explanations that hide the cause.
 This is a framing change, not a scope change, but the humans should agree to it (flagged for
 checkpoint (a)).
 
+**Revision after Reviewer 2 (phase 1, `reviews/phase1_review.md`).** A list of "no paper has all
+five features" is a weak novelty argument: Indian caste-name hiring audits already exist
+(rao2025invisible, zaveri2025caste, and Dammu et al. 2024, EMNLP), and christian2026self is
+closer to our self-prediction probe than first described. We therefore order the contributions
+as follows:
+
+- **Headline (RQ3):** do models *disclose* identity-driven decision changes, and can they
+  *predict* them, when identity is signalled only implicitly through Indian names, surnames and
+  hometowns, in English and in Hindi? This is where we are clearly new.
+- **Precondition (RQ1, RQ2):** measured decision bias, with a noise floor and a manipulation
+  check. This is needed to make RQ3 meaningful and it also speaks to the conflicting earlier
+  results (rao2025invisible vs zaveri2025caste), but it is not the headline.
+- **Setting (RQ4):** within-family scale.
+
+The **manipulation check** becomes mandatory: we report whether each model can recover the
+coded attribute from the name, and we also report RQ3 on the subset of names the model decodes
+correctly.
+
 ## 3. Specific gaps and how our design answers them
 
 **G1 — Conflicting evidence on Indian name bias in decisions.** zaveri2025caste reports strong
