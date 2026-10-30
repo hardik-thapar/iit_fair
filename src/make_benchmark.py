@@ -177,7 +177,7 @@ def decision_prompt(p, tmpl, lang, full_name, hometown, explain=False):
 
 
 def load_names():
-    rows = list(csv.DictReader(open(ROOT / "design" / "name_pools.csv", encoding="utf-8")))
+    rows = list(csv.DictReader(open(ROOT / "design" / "name_pools_v1_used_in_run.csv", encoding="utf-8")))
     pools = {}
     for r in rows:
         pools.setdefault(r["cell"], {})[int(r["pos"])] = r
