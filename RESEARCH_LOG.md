@@ -49,3 +49,35 @@
   sizes). Llama/Gemma are added later only if approval arrives before the Phase 4
   pilot; the design does not depend on them. Exact model versions are picked in
   Phase 3 ("latest stable at start of experiments").
+
+## 2026-10-30 - Phase 1 literature review done
+
+**Done**
+- Three Lit Reviewer passes (decision audits + counterfactual fairness; India + Hindi bias;
+  faithfulness + LLM-as-judge). Merged into `lit/notes.md` (57 papers) and
+  `paper/refs.bib` (57 entries). Every title machine-checked against arXiv / Crossref /
+  ACL Anthology / publisher page (`lit/ref_check.csv`); 56 ok, 1 partial (zaveri2025caste:
+  exists per OpenAlex, PDF blocked on recheck).
+- Read the closest paper (arcuschin2026biases, "Biases in the Blind Spot", ICML 2026)
+  myself: abstract, intro, method; keyword-searched the rest. Confirmed it has no caste,
+  India, Hindi, self-prediction or logprob P(Yes).
+- Wrote `lit/gap_analysis.md`.
+
+**Decided**
+- Exact study not done by anyone we found -> no stop. But the proposal's claim "no study
+  measures decision bias and explanation faithfulness together" is false for Western
+  markers (arcuschin2026biases, matton2025walk). Novelty restated as Indian name-coded
+  markers + Hindi + self-prediction + scale. RQs unchanged; framing change goes to the
+  humans at checkpoint (a).
+- Borrow: McNemar + verbalisation rate on discordant pairs (arcuschin2026biases),
+  CCT (siegel2024probabilities), Yes/No probability (tamkin2023evaluating), kappa-based
+  judge validation.
+- Add a manipulation check (can the model infer the attribute from the name?) because
+  rao2025invisible's null result could mean "fair" or "did not notice".
+
+**Infra**
+- vLLM image ready: `rocm/vllm@sha256:e0ea9a10b729...` (vLLM 0.29.1.dev0, torch 2.13
+  ROCm 10.1, transformers 5.18); GPU visible inside the container. No GPU job run yet.
+
+**Next**
+- Reviewer 2 on Phase 1; Methodologist drafts `design/spec.md` (running in parallel).

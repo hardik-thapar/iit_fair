@@ -3,13 +3,14 @@
 ## Phase 0 - Setup
 - [x] Repo structure, git, README
 - [x] SSH to GPU server works (root@134.199.194.213, MI300X, ROCm)
-- [ ] vLLM ROCm docker image pulled on server (in progress)
+- [x] vLLM ROCm image pulled and GPU visible (vLLM 0.29.1.dev0)
 - [~] HF token on server (valid; gated repos still 403 - licences or token scope)
 
 ## Phase 1 - Literature review
-- [ ] Search 6 areas, 25-40 papers, notes in `lit/notes.md`
-- [ ] BibTeX in `paper/refs.bib`, every entry verified
-- [ ] `lit/gap_analysis.md`, including "has this exact study been done?"
+- [x] Search 6 areas, notes in `lit/notes.md` (57 papers)
+- [x] BibTeX in `paper/refs.bib`, titles verified (1 partial)
+- [x] `lit/gap_analysis.md` (exact study not done; novelty narrowed)
+- [ ] Reviewer 2 on Phase 1
 
 ## Phase 2 - Design
 - [ ] `design/spec.md`
