@@ -101,6 +101,13 @@ def est_ci(vals, W):
     return m, np.percentile(bs, 2.5), np.percentile(bs, 97.5)
 
 
+def boot_p(vals, W):
+    """Two-sided p from the two-way bootstrap: 2 * min(share of replicates <= 0, share >= 0)."""
+    ok = ~np.isnan(vals)
+    bs = (W[:, ok] @ vals[ok]) / np.maximum(W[:, ok].sum(1), 1e-12)
+    return min(1.0, 2 * min((bs <= 0).mean(), (bs >= 0).mean()) + 1 / B)
+
+
 def signflip_p(vals, rng):
     vals = vals[~np.isnan(vals)]
     T = abs(vals.mean())
@@ -165,9 +172,10 @@ def main():
             fr = v[v.variant == a].flip.mean()
             fc = v[v.variant == CTRL[a]].flip.mean()
             p = signflip_p(d, rng)
-            ps.append(p)
+            pb = boot_p(d, W)
+            ps.append(pb)
             sub = v[v.variant == a]
-            rows.append({"model": model, "attribute": a, "mean_dp": m, "ci_lo": lo, "ci_hi": hi, "p_signflip": p,
+            rows.append({"model": model, "attribute": a, "mean_dp": m, "ci_lo": lo, "ci_hi": hi, "p_signflip": p, "p_boot2way": pb,
                          "excess_vs_ctrl": e, "excess_lo": elo, "excess_hi": ehi,
                          "abs_excess": x, "abs_excess_lo": xlo, "abs_excess_hi": xhi,
                          "flip_rate": fr, "ctrl_flip_rate": fc,
@@ -187,7 +195,7 @@ def main():
                         "dp_hi": m_hi[0], "dp_hi_lo": m_hi[1], "dp_hi_hi": m_hi[2],
                         "hi_minus_en_excess": L, "lo": Llo, "hi": Lhi,
                         "tost_equiv_2pp": bool(Llo > -0.02 and Lhi < 0.02),
-                        "p_signflip": signflip_p(dl["hi"] - dl["en"], rng)})
+                        "p_signflip": signflip_p(dl["hi"] - dl["en"], rng), "p_boot2way": boot_p(dl["hi"] - dl["en"], W)})
         for r, pa in zip(rows, holm(ps)):
             r["p_holm"] = pa
             r["sig_holm"] = pa < 0.05
@@ -200,7 +208,7 @@ def main():
                         "flip_rate": v[v.variant == cn].flip.mean(), "p_signflip": signflip_p(d, rng)})
     rq1 = pd.DataFrame(rq1)
     rq2 = for_lang = pd.DataFrame(rq2)
-    rq2["p_holm"] = rq2.groupby("model").p_signflip.transform(lambda s: holm(s.values))
+    rq2["p_holm"] = rq2.groupby("model").p_boot2way.transform(lambda s: holm(s.values))
     rq1.to_csv(RES / f"rq1_decision_bias{suffix}.csv", index=False)
     if robust:
         print(rq1[rq1.attribute.isin(ATTR)][["model", "attribute", "mean_dp", "p_holm"]].to_string())
@@ -387,7 +395,7 @@ def figures(rq1, rq2, rq3, rq3b, acc):
     ax.set_xticks(range(len(attrs)), [ATTR[a] for a in attrs])
     ax.set_ylabel("Mean ΔP(Yes) vs reference (pp)")
     ax.legend(ncol=4, fontsize=6, frameon=False, loc="upper left")
-    ax.set_title("Decision shift per identity swap (95% two-way bootstrap CI; circled = Holm p<0.05)")
+    ax.set_title("Decision shift per identity swap (95% two-way bootstrap CI; circled = Holm-adjusted bootstrap p<0.05)")
     fig.tight_layout()
     fig.savefig(FIG / "fig1_delta_p.pdf"); fig.savefig(FIG / "fig1_delta_p.png")
     # Fig 2: flip rate vs matched control
