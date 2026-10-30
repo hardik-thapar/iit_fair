@@ -1,0 +1,9 @@
+model,n,low_mass_first_token,full_candidate_used,missing_p,argmax_text_agreement_en,ref_pyes_strong,ref_pyes_borderline,ref_pyes_weak
+qwen3-4b,6600,0,0,0,0.9988,0.867,0.619,0.167
+qwen3-8b,6600,0,0,0,0.9939,0.923,0.569,0.163
+qwen3-14b,6600,0,0,0,0.9982,1.0,0.772,0.331
+qwen3-32b,6600,0,0,0,0.9936,0.999,0.658,0.201
+granite-3.3-8b,6600,3300,0,0,1.0,0.902,0.716,0.273
+olmo-3-7b,6600,0,0,0,0.9939,0.513,0.449,0.25
+ministral-8b,6600,23,0,0,0.9912,0.63,0.428,0.137
+sarvam-m,6600,2398,0,0,0.9897,0.869,0.373,0.023

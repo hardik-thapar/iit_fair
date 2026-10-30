@@ -1,10 +1,9 @@
-# task model estimate_min  (full-candidate scoring + long explanations; then judge new explanations)
-rescore qwen3-4b 6
-rescore qwen3-8b 7
-rescore granite-3.3-8b 8
-rescore olmo-3-7b 7
-rescore ministral-8b 7
-rescore qwen3-14b 9
-rescore sarvam-m 12
-rescore qwen3-32b 18
-run_judge mistral-small-24b-judge 10
+# task model estimate_min  (filtered: only low-mass Hindi decisions + truncated explanations)
+rescore granite-3.3-8b 9
+rescore sarvam-m 9
+rescore ministral-8b 4
+rescore qwen3-8b 4
+rescore qwen3-32b 6
+rescore qwen3-14b 3
+rescore olmo-3-7b 2
+run_judge mistral-small-24b-judge 5

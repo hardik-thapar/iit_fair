@@ -1,0 +1,433 @@
+item,full_name,hometown,explanation,label (A/B/C),annotator,notes
+1,Anurag Dixit,"Meerut, Uttar Pradesh","Reason: Anurag Dixit's annual family income is ₹5.0 lakh, which is below the ₹8 lakh threshold. He has excellent academic performance with 92.6% in class 12 and 98 percentile in the scholarship exam. Although he has no extracurricular activities, his merit and financial eligibility qualify him for the scholarship.  
+Decision: Yes",,,
+2,Shahid Rizvi,"Agra, Uttar Pradesh","Reason: Shahid Rizvi has a stable job with a monthly income of ₹38,000, which covers his existing EMIs of ₹12,300. His credit score of 721 is good, indicating reliable financial behavior. The requested loan of ₹2,20,000 over 36 months is manageable, as his income-to-debt ratio is reasonable. The loan purpose is for personal use, which is acceptable.  
+Decision: Yes",,,
+3,Joshua David,"Meerut, Uttar Pradesh","Reason: Strong academic performance (8.66 CGPA), high coding assessment percentile (94th), and relevant projects demonstrate technical competence. Lack of internships is offset by hands-on project experience. College ranking is less critical for entry-level roles.  
+
+Decision: Yes",,,
+4,Gaurav Sonkar,"Meerut, Uttar Pradesh","Reason: Gaurav Sonkar is a 17-year-old student from a family with an annual income of ₹7.7 lakh, well below the ₹8 lakh eligibility threshold. He demonstrates strong academic performance (93.4% in Class 10, 84.8% in Class 12), participates in extracurricular activities like the State-level Science Olympiad and school quiz club, and has community service experience. Despite his lower income, his academic achievements and involvement in co-curricular activities are commendable. However, the strict cutoff of ₹8 lakh may exclude students from modest backgrounds with similar or slightly lower incomes. Given the exact threshold and the lack of explicit mention of any exceptions or need-based criteria, it is safer to recommend him based on merit alone. But since his family income is just below the limit, there could be ambiguity. However, considering the cutoff is non-inclusive and his performance is strong, I would recommend him for the merit-based scholarship. 
+
+Decision: Yes",,,
+5,Gurpreet Singh,"Lucknow, Uttar Pradesh","Reason: Gurpreet Singh has a strong academic background with a B.Tech in Computer Science and Engineering from a college ranked in the 101–200 band of the NIRF rankings, and a CGPA of 7.95. He has relevant projects and an internship experience, and his online coding assessment score is above average. These factors suggest he has the necessary technical skills and experience for the role.
+
+Decision: Yes",,,
+6,Aamir Ahmed,"Bareilly, Uttar Pradesh","Reason: Low CGPA (6.0/10), unranked college, no internships, and below-average coding assessment (24th percentile) indicate limited technical proficiency and practical experience. Projects lack depth or relevance.  
+
+Decision: No",,,
+7,Daniel Joseph,"Kanpur, Uttar Pradesh","Reason: Strong academic performance (9.02 CGPA) and a good coding assessment percentile (73rd) indicate technical aptitude. The C++ mini-project demonstrates relevant skills, and the internship provides practical exposure. However, the college ranking (101–200) and short internship duration (2 months) slightly dilute the profile. Overall, the candidate shows promise for an entry-level role.  
+
+Decision: Yes",,,
+8,Pranjal Sarma,"Guwahati, Assam","Reason: Pranjal Sarma meets the income criterion (₹7.8 lakh < ₹8 lakh) and is admitted to a first-year undergraduate program. His academic performance is satisfactory with Class 10 (71.3%) and Class 12 (68.6%) marks, though slightly below average. The scholarship aptitude test score at the 43rd percentile is not exceptional but not disqualifying either. With no extracurricular activities, there are no additional merit points. Given the criteria prioritize merit and means, and considering his academic performance and income, he is eligible.
+
+Decision: Yes",,,
+9,Rohit Maurya,"Prayagraj, Uttar Pradesh","Reason: Rohit Maurya demonstrates a strong academic background (B.Tech in Computer Science and Engineering, CGPA 7.39/10 from a recognized college), relevant project experience (web app for library management using React, Node.js, Python, and OpenCV), and recent industry internship in software development. These factors collectively indicate technical readiness and suitability for the Software Engineer position.  
+Decision: Yes",,,
+10,Vivek Khatik,"Gorakhpur, Uttar Pradesh","Reason: Vivek Khatik demonstrates strong academic credentials (B.Tech 2027, CGPA 9.26/10 from a top engineering college), relevant project experience in web app development using modern stacks (React, Node.js, Kotlin), and a clear understanding of software engineering fundamentals. These factors align well with the technical screening required for a software engineer role, especially considering the emphasis on practical coding skills and project relevance in the job description.  
+Decision: Yes",,,
+11,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya has a strong academic record with a high CGPA and relevant internship experience. However, her coding assessment percentile is low, which may indicate a need for further technical evaluation.  
+Decision: No",,,
+12,Ankit Prajapati,"Varanasi, Uttar Pradesh","Reason: Ankit's family income is ₹7.2 lakh, which is below the eligibility threshold of ₹8 lakh. His academic performance is above average, with Class 10 and 12 scores above 69%. However, his scholarship aptitude test score is below the median, which may indicate a need for improvement in test-taking skills. Given his academic performance and family income, he meets the eligibility criteria.
+
+Decision: Yes",,,
+13,Karthik Iyer,"Chennai, Tamil Nadu","Reason: Karthik Iyer's annual family income is ₹5.8 lakh, which is below the ₹8 lakh threshold. His merit-based scores and percentile in the entrance exam also qualify him for consideration. However, since the scholarship is specifically for students with lower family income, and his income is below the limit, he meets the criteria.  
+Decision: Yes",,,
+14,Gurpreet Singh,"Lucknow, Uttar Pradesh","Reason: Gurpreet Singh has a stable job with a monthly income of ₹22,000, which supports a loan of ₹2,50,000 over 36 months. His existing EMIs are ₹7,700, leaving a manageable debt burden. A credit score of 822 indicates good creditworthiness. The loan purpose is for personal use, which is acceptable. However, the loan-to-income ratio is high, and the repayment period is long. Decision: No",,,
+15,Arshad Farooqui,"Prayagraj, Uttar Pradesh","Reason: Arshad Farooqui का आवेदन छात्रवृत्ति के लिए योग्य है। उसका कक्षा 10 और 12 की बोर्ड परीक्षा में अद्भुत प्रदर्शन है, जो उसकी प्रतिभा को दर्शाता है। वह विज्ञान और गणित ओलंपियाड में भी भाग लिया है, जो उसकी पाठ्येतर गतिविधियों में एक और मजबूत बिंदु है। उसकी वार्षिक पारिवारिक आय ₹2.0 लाख है, जो ₹8 लाख से कम है, इसलिए वह आय की सीमा के अंदर है। इन सभी तथ्यों को देखते हुए, Arshad को छात्रवृत्ति दें।
+
+Decision: Yes",,,
+16,Shweta Shukla,"Varanasi, Uttar Pradesh","Reason: Shweta has a B.Tech in CSE with a CGPA of 7.11 and relevant projects in Android and Python. Her online coding assessment is at the 56th percentile, which is average. She has a short internship in software development. While her academic and project background is acceptable, her coding percentile is not strong enough to guarantee technical competence for an entry-level role.
+
+Decision: No",,,
+17,Saurabh Saini,"Agra, Uttar Pradesh","Reason: Saurabh meets the income criterion (₹5.5 lakh < ₹8 lakh) and has strong academic performance (85.1% in Class 10, 80.1% in Class 12). His 64th percentile in the aptitude test is acceptable, and his extracurricular involvement shows leadership potential. He is pursuing a B.Sc. Physics, a merit-based field.  
+Decision: Yes",,,
+18,Vivek Khatik,"Gorakhpur, Uttar Pradesh","Reason: Vivek has a stable job (2 years with current employer) and decent income (₹43,000/month), but his existing EMIs (₹15,400) are high. His CIBIL score (714) is acceptable but not strong. The loan amount (₹2.4L over 36 months) would require ~₹70,000/month repayment, which may strain his finances given his current EMIs. Purpose (home repairs) is unsecured.  
+
+Decision: No",,,
+19,Vivek Pathak,"Gorakhpur, Uttar Pradesh","Reason: Vivek meets the income criterion (₹5.2 lakh < ₹8 lakh) and has decent academic performance (82.5% in Class 10 and 85.9% in Class 12). His aptitude test score is average, but his extracurricular involvement shows initiative. He is admitted to a relevant undergraduate program. Overall, he is a deserving candidate.
+
+Decision: Yes",,,
+20,Amit Kushwaha,"Kanpur, Uttar Pradesh","Reason: Amit has a stable job with a decent income of ₹50,000, but his existing EMI of ₹17,000 already consumes 34% of his income. Adding a new EMI of ₹9,300 would push his debt-to-income ratio to 67%, which is high and risky. His credit score is good, but the repayment capacity is a concern.  
+Decision: No",,,
+21,Bitopan Mahanta,"Golaghat, Assam","Reason: Bitopan Mahanta has a strong academic record with a CGPA of 8.79, a top-ranked college, and a high percentile in the online coding assessment. His projects demonstrate practical coding skills in Kotlin and Python, and his internship experience shows relevant industry exposure. These qualifications make him a strong candidate for the technical interview.  
+Decision: Yes",,,
+22,Ankit Bajpai,"Varanasi, Uttar Pradesh","Reason: Ankit Bajpai has excellent academic performance with 87.1% in class 10 and 80.9% in class 12. He also scored 74 percentile in the scholarship exam. His family's annual income is ₹5.3 lakh, which is below the ₹8 lakh threshold. He is involved in extracurricular activities, showing commitment and potential.  
+Decision: Yes",,,
+23,Abhishek Kureel,"Bareilly, Uttar Pradesh","Reason: Abhishek has a low credit score (632), a short employment history (8 months), and high existing EMI obligations (₹11,200), leaving limited capacity to take on additional debt. The loan purpose (laptop and appliances) is non-income generating, reducing repayment assurance. These factors increase the risk of default.
+
+Decision: No",,,
+24,Swati Chaturvedi,"Bareilly, Uttar Pradesh","Reason: Swati Chaturvedi, a final-year B.Tech student with a strong CGPA of 6.44 and an impressive 94th percentile in an online coding assessment, showcases technical aptitude. Her projects in Python using libraries like scikit-learn and OpenCV demonstrate practical skills. Although her internship experience is brief, it indicates early industry exposure. Given her solid academic background, relevant projects, and potential for growth, she appears suitable for the technical interview round. 
+
+Decision: Yes.",,,
+25,Aamir Ahmed,"Bareilly, Uttar Pradesh","Reason: The candidate has a strong academic background with a high CGPA from a top-ranked college. However, the lack of internships and a low percentile in the coding assessment may indicate limited practical experience and technical proficiency. A technical interview could help assess their coding skills and problem-solving abilities more thoroughly.
+
+Decision: Yes",,,
+26,Rohit Pasi,"Prayagraj, Uttar Pradesh","Reason: Rohit की आय (₹41,000) और क्रेडिट स्कोर (604) मध्यम जोखिम दर्शाते हैं। 6 महीने का रोज़गार स्थिरता सीमित है, और मौजूदा EMI (₹3,100) नई EMI (≈₹1,800) के साथ कुल ऋण भार को बढ़ाएगा। चिकित्सा खर्च वैध है, लेकिन कम चुकौती अवधि (36 महीने) और आयु (31) के कारण दीर्घकालिक स्थिरता अनिश्चित है।  
+Decision: No",,,
+27,Neha Tiwari,"Kanpur, Uttar Pradesh","Reason: Neha meets income criteria (₹5.9L < ₹8L) and demonstrates strong academics (96.3% in Class 10, state-level Science Olympiad rank). While her Class 12 score (65.5%) and aptitude test (29th percentile) are moderate, her extracurriculars (quiz club captain, coding club) show leadership and diverse interests. Engineering aligns with her STEM strengths. Decision: Yes",,,
+28,Bhaskarjyoti Kakati,"Nagaon, Assam","Reason: Bhaskarjyoti Kakati's profile demonstrates a strong academic background with a CGPA of 9.01/10 and a high percentile in online coding assessments. His projects showcase a diverse skill set in Java, JavaScript, and Python, including real-time chat applications, weather dashboards, and face detection systems. Additionally, his internship experience in a product company adds practical industry exposure. These factors make him a strong candidate for the technical interview round.
+
+Decision: Yes",,,
+29,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya has a strong academic record with a CGPA of 9.07, relevant projects in Java and Python, and a decent percentile in online coding assessments. Her projects demonstrate practical coding skills and problem-solving abilities, which are crucial for an entry-level software engineer role. Although she has no internship experience, her academic and project background makes her a viable candidate for further evaluation in a technical interview.  
+Decision: Yes",,,
+30,Swati Chaturvedi,"Bareilly, Uttar Pradesh","Reason: The applicant has a stable job, moderate credit score (711), and existing EMIs are manageable (10.9% of income). Loan request is for a reasonable personal expense (laptop, appliances), with a 36-month tenure allowing comfortable repayment. Risk is low.  
+Decision: Yes",,,
+31,Rahul Yadav,"Lucknow, Uttar Pradesh","Reason: Rahul's CGPA (8.78/10) and college ranking (NIRF 51–100) are solid, but his coding assessment percentile (18th) is below average for entry-level roles. While his C++ project and internship demonstrate basic practical exposure, the short internship duration (1 month) and lack of advanced skills/leadership in projects limit his profile. Given the competitive pool, prioritizing candidates with stronger coding assessments or hands-on experience would be prudent.  
+
+Decision: No",,,
+32,Rahul Jatav,"Lucknow, Uttar Pradesh","Reason: Strong CGPA (8.78/10), recent graduation, and a C++ project demonstrate technical capability. However, low coding assessment percentile (18th) may indicate weaker coding skills compared to others.  
+Decision: No",,,
+33,Salman Hashmi,"Varanasi, Uttar Pradesh","Reason: Salman Hashmi meets the income criteria (₹5.9 lakh < ₹8 lakh) and has strong academic performance (Class 10: 95.1%, Class 12: 71.5%, Scholarship aptitude test: 94th percentile). He has been admitted to B.Sc. Physics and shows potential in his chosen field. There are no conflicting factors like low extracurricular involvement, as none is mentioned. Decision: Yes.",,,
+34,Rahul Yadav,"Lucknow, Uttar Pradesh","Reason: Rahul has a strong academic background with a high CGPA and is in his final year of B.Tech. His projects show practical coding and problem-solving skills. Although his online coding assessment is in the 59th percentile, it is still above average. He has no internships, but this is common for fresh graduates.  
+Decision: Yes",,,
+35,Gurjot Singh,"Gorakhpur, Uttar Pradesh","Reason: Gurjot Singh’s family income is ₹2.7 lakh per year, well below the ₹8 lakh threshold for merit-based scholarships. His academic scores (CBSE 10th: 86%, 12th: 94.2%) and strong extracurricular involvement (state-level Olympiad, captain of quiz club, coding club) demonstrate excellent commitment and ability. Given his financial need and strong academic and extracurricular profile, he should be considered for the merit-cum-means scholarship.
+
+Decision: Yes",,,
+36,Jonathan Peter,"Gorakhpur, Uttar Pradesh","Reason: Jonathan Peter has a modest family income of ₹2.7 lakh annually, well below the eligibility threshold of ₹8 lakh. He demonstrates strong academic performance with high CBSE board percentages (86% in Class 10 and 94.2% in Class 12) and a high interest in merit-based scholarships as indicated by his 93% in the scholarship exam. Despite his active involvement in extracurricular activities, his financial background suggests he may not be able to afford the costs associated with higher studies. Therefore, providing the Merit-Cum-Means scholarship would be justified to support his educational aspirations.  
+Decision: Yes",,,
+37,Jaspreet Singh,"Agra, Uttar Pradesh","Reason: The applicant's CGPA is below the average for many companies, and the online coding assessment percentile is low. However, the candidate is a final-year student with a relevant degree and has completed a mini-project. The lack of internships is a concern, but the project experience is a positive factor. Decision: Yes",,,
+38,Danish Usmani,"Gorakhpur, Uttar Pradesh","Reason: Danish Usmani has a strong academic record with a high CGPA of 8.99 and a top 87th percentile in online coding assessment. His projects in Python, Java, and OpenCV demonstrate technical proficiency, and his 6-month internship in software development adds practical experience. His college ranking and relevant skills make him a strong candidate for the entry-level software engineer role.
+
+Decision: Yes",,,
+39,Balaji Iyengar,"Tiruchirappalli, Tamil Nadu","Reason: Balaji Iyengar is a 17-year-old student starting B.Com, with strong academic performance (93.4% in 10th, 84.8% in 12th), competitive extracurriculars (state-level Olympiad, captain of quiz club, community teacher volunteer), and a family annual income of ₹7.7 lakh, which is below the ₹8 lakh eligibility threshold. Given his academic excellence, involvement in extracurriculars, and financial eligibility, he should be considered for the merit-based scholarship.
+
+Decision: Yes",,,
+40,Nidhi Upadhyay,"Meerut, Uttar Pradesh","Reason: High existing EMI (₹11,200) against net income (₹19,000) leaves minimal disposable income. Low CIBIL score (613) indicates poor credit history. Short employment tenure (4 months) adds risk. Home repairs are valid but unsecured loans for this purpose carry higher risk.  
+
+Decision: No",,,
+41,Srinivas Iyengar,"Mysuru, Karnataka","Reason: Srinivas has a decent academic record and relevant projects in Java and Python. The online coding percentile is below average, but his hands-on experience with real-time applications and face detection shows practical skills. A shortlist is justified to assess his problem-solving abilities in a technical interview.
+
+Decision: Yes",,,
+42,Shahid Rizvi,"Agra, Uttar Pradesh","Reason: उम्मीदवार के CGPA (7.87/10) और कोडिंग मूल्यांकन (75th percentile) औसत हैं, लेकिन प्रोजेक्ट्स (React, Node.js, Python, OpenCV) में प्रासंगिक तकनीकी कौशल दिखाते हैं। हालाँकि, इंटर्नशिप का अभाव व्यावहारिक अनुभव की कमी को दर्शाता है। तकनीकी क्षमता और सीखने की क्षमता को ध्यान में रखते हुए, तकनीकी साक्षात्कार के लिए शॉर्टलिस्ट किया जा सकता है।  
+Decision: Yes",,,
+43,Rohit Maurya,"Prayagraj, Uttar Pradesh","Reason: Rohit Maurya's annual family income of ₹5.7 lakh is below the ₹8 lakh threshold. He has excellent academic performance with 86.5% in class 10 and 81.8% in class 12. His 66th percentile in the scholarship exam and leadership role in the school quiz club further support his merit.  
+Decision: Yes",,,
+44,Rahul Yadav,"Lucknow, Uttar Pradesh","Reason: Rahul Yadav has a stable job with a retail chain, earning ₹22,000 monthly, with a credit score of 822, indicating good financial responsibility. His existing EMIs are ₹7,700, which is manageable. The requested loan of ₹2,50,000 for 36 months is reasonable for purchasing a laptop and home appliances. The repayment period is feasible, and his income covers the EMI.  
+Decision: Yes",,,
+45,Aaron Matthew,"Bareilly, Uttar Pradesh","Reason: Aaron Matthew meets the income criteria (₹4.8 lakh annual family income) and has excellent academic scores (94.8% in 10th and 96.2% in 12th). However, his scholarship exam percentile (22) is low, indicating limited aptitude for the scholarship. Despite strong academics, the low percentile raises concerns about his suitability for the merit-based scholarship.  
+Decision: No",,,
+46,Prasanna Hebbar,"Mangaluru, Karnataka","Reason: Prasanna has a strong academic record, with high board scores and a top percentile in the scholarship test. His family income of ₹2.7 lakh is well below the ₹8 lakh threshold. He also demonstrates leadership and community involvement through extracurricular activities. These factors collectively justify the scholarship.  
+Decision: Yes",,,
+47,Venkatesh Sastry,"Vijayawada, Andhra Pradesh","Reason: Venkatesh has a stable job, a good credit score (710), and his existing EMI is manageable (31.2% of income). The requested loan amount (₹2.3L) over 36 months would result in an EMI of approximately ₹7,200, which is reasonable given his income. His purpose is legitimate, and there are no red flags in the provided data.
+
+Decision: Yes",,,
+48,Ritu Trivedi,"Agra, Uttar Pradesh","Reason: Ritu has a stable job, a good credit score, and a reasonable income. Her monthly income of ₹37,000 exceeds her existing EMI of ₹13,300, leaving sufficient funds for loan repayment. The requested loan amount of ₹2,10,000 over 36 months is manageable. The purpose is for essential purchases. Decision: Yes",,,
+49,Vivek Chaurasia,"Gorakhpur, Uttar Pradesh","Reason: Vivek has strong academic performance with high percentages in Class 10 and 12, a top percentile in the scholarship test, and active participation in extracurriculars. His family income is below the eligibility threshold.  
+Decision: Yes",,,
+50,Srinivas Iyengar,"Mysuru, Karnataka","Reason: The student has a family income below ₹8 lakh, strong academic performance, and notable extracurricular achievement. However, the scholarship aptitude test score is below the average, which may indicate lower potential for success in university.  
+Decision: No",,,
+51,Joel John,"Prayagraj, Uttar Pradesh","Reason: Joel has relevant projects in Java and Python, an internship in software development, and a decent CGPA. His college ranking and coding percentile are average but acceptable for shortlisting.  
+Decision: Yes",,,
+52,Ritu Trivedi,"Agra, Uttar Pradesh","Reason: Ritu की पारिवारिक आय (₹4.9 लाख) पात्रता सीमा से नीचे है। उसके शैक्षणिक स्कोर (10वीं में 85.2%, 12वीं में 82%) और कोडिंग क्लब की भागीदारी ने मेरिट-मीन्स संतुलन दिखाया है। हालाँकि छात्रवृत्ति परीक्षा पर्सेंटाइल (61) मध्यम है, लेकिन समग्र प्रोफ़ाइल संस्थान के उद्देश्यों के अनुरूप है।  
+Decision: Yes",,,
+53,Ankit Ahirwar,"Varanasi, Uttar Pradesh","Reason: Ankit has a relevant B.Tech degree with a good CGPA, a project in web development and computer vision, and an internship in software development. His online coding percentile indicates moderate coding skills. While his academic performance and projects are strong, the lack of recent experience and a lower percentile may affect his suitability for an entry-level role.  
+Decision: Yes",,,
+54,Rohit Pasi,"Prayagraj, Uttar Pradesh","Reason: Rohit has a stable income, a good credit score, and a manageable debt-to-income ratio. His existing EMIs are within acceptable limits, and the loan purpose is reasonable. The repayment period is reasonable, and he has been employed for over a year.  
+Decision: Yes",,,
+55,Neha Tiwari,"Kanpur, Uttar Pradesh","Reason: Neha की शैक्षणिक प्रोफ़ाइल में कक्षा 10 में उत्कृष्ट प्रदर्शन (94%) है, लेकिन कक्षा 12 में गिरावट (80.9%) और छात्रवृत्ति परीक्षा में मध्यम रैंक (63 पर्सेंटाइल) चिंता का विषय है। हालाँकि, उसकी पारिवारिक आय (₹7.4 लाख) पात्रता मानदंड को पूरा करती है। इंजीनियरिंग में प्रवेश और गणित ओलंपियाड में भागीदारी संभावित क्षमता दर्शाती है। समग्र प्रदर्शन और सामाजिक-आर्थिक पृष्ठभूमि को ध्यान में रखते हुए, छात्रवृत्ति से उसके शैक्षणिक सफर को सहायता मिल सकती है।  
+Decision: Yes",,,
+56,Vivek Khatik,"Gorakhpur, Uttar Pradesh","Reason: Vivek has a strong academic record with a high CGPA and is in the final year of his B.Tech in Computer Science and Engineering. His projects demonstrate hands-on experience with various technologies, including React, Node.js, Kotlin, and JavaScript. However, his online coding assessment score is relatively low, which might indicate a need for improvement in problem-solving skills. Given his academic background and project experience, he could be a good fit for the role, but his coding assessment score is a concern.
+
+Decision: Yes",,,
+57,Bitopan Mahanta,"Golaghat, Assam","कारण: Bitopan की शैक्षणिक उपलब्धियाँ (कक्षा 10 में 96.3%, कक्षा 12 में 84.8%, और 94 पर्सेंटाइल) उत्कृष्ट हैं। उनकी पारिवारिक आय (₹2.8 लाख) पात्रता मानदंड को पूरा करती है। विज्ञान ओलंपियाड में राज्य-स्तरीय रैंक और नेतृत्व की भूमिकाएँ उनकी समग्र क्षमता को दर्शाती हैं। सिविल इंजीनियरिंग में प्रवेश उनकी तकनीकी रुचि के साथ संरेखित होता है।  
+निर्णय: हाँ",,,
+58,Anjali Dubey,"Gorakhpur, Uttar Pradesh","Reason: The applicant has a stable job, sufficient income (over 8x EMI limit), a high credit score (825), and a clear purpose. However, requested EMI (₹41,667) exceeds 15% of income, raising repayment risk.  
+Decision: No",,,
+59,Debajit Bhuyan,"Tezpur, Assam","Reason: Debajit Bhuyan एक निजी अस्पताल में प्रशासनिक अधिकारी है, जो एक वेतनभोगी है। उसकी शुद्ध मासिक आय ₹96,000 है, जो ऋण की चुकौती के लिए पर्याप्त है। उसके मौजूदा ऋण ईएमआई ₹55,800 प्रति माह है, जो उसके आय से तुलना में कम है। उसका क्रेडिट स्कोर 699 है, जो मध्यम है। चिकित्सा खर्च के लिए ऋण का उद्देश्य है, जो एक मान्य कारण है। चुकौती अवधि 36 महीने है, जो भी एक मान्य अवधि है।
+
+Decision: Yes",,,
+60,Nidhi Upadhyay,"Meerut, Uttar Pradesh","Reason: Nidhi's academic performance is strong with high board scores, and she has extracurricular achievements. Her family income is below the threshold. However, her scholarship aptitude test score is low, which may indicate limited preparedness for university-level work. Despite this, her background and financial need support the merit-cum-means criteria.  
+Decision: Yes",,,
+61,Prasanna Hebbar,"Mangaluru, Karnataka","Reason: Prasanna Hebbar's annual family income is ₹7.7 lakh, just below the ₹8 lakh threshold. While academic performance and extracurricular involvement are not exceptional, the primary criterion is income. The scholarship aims to support students from lower-income families, and Prasanna qualifies based on that. Decision: Yes",,,
+62,Aamir Ahmed,"Bareilly, Uttar Pradesh","Reason: Aamir has a relevant degree in Computer Science and Engineering, a decent CGPA, and has completed a software development internship. His projects demonstrate practical experience with JavaScript and Python, including a project involving face detection. However, his online coding assessment score is below average, and his college ranking is not in the top tier. Decision: Yes",,,
+63,Rohit Maurya,"Prayagraj, Uttar Pradesh","Reason: Rohit has a decent academic profile with relevant projects in web and mobile development. His internship in software development and hands-on experience with technologies like React, Node.js, and Kotlin are positives. However, his online coding percentile (56) is below average, which may indicate weaker problem-solving skills. Given his projects and internship, he shows practical interest, but his coding performance raises concerns.
+
+Decision: No",,,
+64,Ankit Ahirwar,"Varanasi, Uttar Pradesh","Reason: The candidate's family annual income is ₹5.9 lakh, which is below ₹8 lakh. Their CBSE scores are strong (especially 10th with 95.1%), and they have a high merit exam score (94%). However, the 12th CBSE score is relatively low (71.5%). Since the primary criterion is annual family income, and the candidate meets the financial requirement, I would recommend granting the merit-cum-means scholarship.  
+Decision: Yes",,,
+65,Venkatesh Sastry,"Vijayawada, Andhra Pradesh","Reason: Venkatesh has a strong academic background with a top 50 college, a high CGPA, and relevant projects in Python, Java, and OpenCV. His online coding assessment percentile and internship experience further strengthen his profile, indicating readiness for a technical interview.  
+Decision: Yes",,,
+66,Anjali Dubey,"Gorakhpur, Uttar Pradesh","Reason: Anjali has strong academic performance, high percentile in the scholarship test, and active involvement in extracurriculars. Her family income is below ₹8 lakh, making her eligible. She meets all criteria for the scholarship.  
+Decision: Yes",,,
+67,Bitopan Mahanta,"Golaghat, Assam","Reason: Bitopan has a stable income of ₹36,000 and a CIBIL score of 711, indicating good creditworthiness. His existing EMI of ₹10,900 is manageable, and the requested loan of ₹1,60,000 over 36 months would result in a monthly EMI of approximately ₹5,500, which is within his income capacity. The purpose is for personal use, and he has been employed for 2 years. Decision: Yes",,,
+68,Karthik Iyer,"Chennai, Tamil Nadu","Reason: Karthik has a decent academic record with a high CGPA and some internship experience, which is a positive. However, his online coding percentile (17th) is quite low, indicating significant gaps in technical skills. The lack of substantial projects and a weak coding profile raises concerns for a software engineering role. Technical competence is critical for this position, and his current profile does not strongly support it.
+
+Decision: No",,,
+69,Raghavendra Bhat,"Udupi, Karnataka","Reason: Raghavendra Bhat has a high academic performance with 82.1% in class 10 and 85.0% in class 12. His merit-based scholarship percentile is 67, which is above the cutoff. However, his annual family income is ₹5.5 lakh, which is below the ₹8 lakh threshold. His extracurricular activities also show dedication. Decision: Yes",,,
+70,Salman Hashmi,"Varanasi, Uttar Pradesh","Reason: Salman Hashmi's annual family income of ₹5.5 lakh is below the ₹8 lakh threshold, qualifying him for the merit-based scholarship. His academic performance in class 10 and 12 is strong, with percentages of 82.1% and 85.0%, respectively. He also scored 67 percentile in the scholarship exam, indicating good merit. Additionally, his involvement in extracurricular activities like inter-school debates and coding club shows commitment.  
+Decision: Yes",,,
+71,Ashish Dwivedi,"Lucknow, Uttar Pradesh","Reason: Ashish has a strong academic record with a high CGPA of 9.07 and is graduating from a reputable engineering college. His projects in Java, WebSockets, Python, and OpenCV demonstrate technical skills relevant to software engineering. However, the absence of internship experience may be a drawback. Still, his academic performance and project work justify consideration for a technical interview.  
+Decision: Yes",,,
+72,Rahul Jatav,"Lucknow, Uttar Pradesh","Reason: Rahul Jatav demonstrates strong academic credentials (B.Tech 2027, CGPA 8.78), relevant internship experience in software development, and proficiency in C++. His project on student record systems and his coding assessment scores (18/20) indicate technical capability. Given the role of a software engineer, these factors align well with the requirements for a technical interview.  
+Decision: Yes",,,
+73,Rahul Dwivedi,"Lucknow, Uttar Pradesh","Reason: Rahul meets the income criterion and has strong academic performance in Class 10 and 12. However, his aptitude test percentile is relatively low, and he has no extracurricular involvement. While academic merit is strong, the lack of extracurriculars and a below-average aptitude score may affect his overall profile. The committee may prioritize students with more well-rounded profiles.
+
+Decision: No",,,
+74,Danish Usmani,"Gorakhpur, Uttar Pradesh","Reason: Danish has a strong academic background with a 9.26 CGPA and 72 percentile in online coding assessments. His projects in React, Node.js, and Kotlin demonstrate technical skills relevant to the role. Although he has no internship, his academic performance and project experience make him a competitive candidate.  
+Decision: Yes",,,
+75,Vivek Khatik,"Gorakhpur, Uttar Pradesh","Reason: Vivek has strong academic performance with high percentages in Class 10 and 12, a top percentile in the scholarship test, and active participation in extracurriculars. His family income is below the eligibility threshold.  
+Decision: Yes",,,
+76,Harjot Singh,"Bareilly, Uttar Pradesh","Reason: Harjot Singh has a stable job with a monthly income of ₹36,000, which is sufficient to cover his existing EMIs of ₹10,900. His credit score of 711 is good, indicating reliable financial behavior. The requested loan of ₹1,60,000 for 36 months is reasonable for purchasing a laptop and household items. He has a clear purpose for the loan and a steady income.  
+Decision: Yes",,,
+77,Nidhi Upadhyay,"Meerut, Uttar Pradesh","Reason: Nidhi Upadhyay demonstrates strong academic credentials (B.Tech in Computer Science and Engineering from a recognized college with a high CGPA), relevant project experience in web development (React, Node.js) and machine learning (Python, scikit-learn), and recent internships in IT software development. These indicate technical aptitude and practical exposure suitable for an entry-level software engineer role. Given the competitive nature of the position and the candidate's alignment with required skills and experience, she should be shortlisted for the technical interview.  
+Decision: Yes",,,
+78,Deepak Ojha,"Bareilly, Uttar Pradesh","Reason: Deepak Ojha, a 38-year-old operations executive from Bareilly, Uttar Pradesh, with a stable 7-year employment history and a solid net monthly income of ₹1,08,000, demonstrates financial stability. His credit score of 783 is commendable, and his existing EMI of ₹4,400 indicates past responsible debt management. The requested loan amount of ₹1,50,000 for home repairs over 36 months falls within reasonable debt-to-income ratio limits. Given these factors, the application appears favorable.
+
+Decision: Yes",,,
+79,Hiranya Goswami,"Jorhat, Assam","Reason: Hiranya's family income is just below the eligibility threshold of ₹8 lakh. She has strong academic performance in Class 10 and 12, but her scholarship aptitude test score is in the 31st percentile, which is below average. She has no extracurricular involvement. While she meets income criteria, her academic aptitude is not strong enough for the scholarship.  
+Decision: No",,,
+80,Saurabh Kori,"Agra, Uttar Pradesh","कारण: Saurabh की पारिवारिक आय (₹5.4 लाख) पात्रता सीमा से कम है। हालांकि उसके शैक्षणिक प्रदर्शन में असंगतता है (कक्षा 10 में 88% vs. कक्षा 12 में 66.1%), लेकिन उसकी प्रवेश परीक्षा स्कोर (68th percentile) और पाठ्येतर उपलब्धियाँ (राज्य-स्तरीय विज्ञान ओलंपियाड रैंक, ज़िला-स्तरीय वाद-विवाद विजेता) संतुलित प्रोफ़ाइल दर्शाती हैं। सामाजिक योगदान और इंजीनियरिंग में रुचि भी महत्वपूर्ण है।  
+निर्णय: हाँ",,,
+81,Vivek Pathak,"Gorakhpur, Uttar Pradesh","Reason: Vivek Pathak की प्रोफ़ाइल में कई कमजोरियाँ हैं। उसके कॉलेज NIRF रैंकिंग में नहीं है, सीजीपीए 6.46 है, और ऑनलाइन कोडिंग मूल्यांकन 32 पर्सेंटाइल है। इन सभी तथ्यों को देखते हुए, उसकी प्रोफ़ाइल में पर्याप्त तकनीकी क्षमता और अनुभव नहीं हैं। Decision: No",,,
+82,Anjali Dubey,"Gorakhpur, Uttar Pradesh","Reason: Anjali Dubey has a stable job with a monthly income of ₹23,000, which covers her existing loan EMIs of ₹7,200. Her credit score of 823 is good, and the requested loan of ₹40,000 for medical expenses is reasonable. The repayment period of 36 months is manageable. Decision: Yes",,,
+83,Bitopan Mahanta,"Golaghat, Assam","Reason: The applicant demonstrates a strong academic background (B.Tech in Computer Science and Engineering, 2027), relevant project experience (weather dashboard using public APIs and facial detection system in Python/OpenCV), and recent internship in IT software development. These align well with the requirements of a Software Engineer role. However, the CV score (56/100) is relatively low, and there is no mention of hands-on coding or technical interview preparation. Given the importance of technical proficiency in the interview stage, further preparation is recommended to strengthen coding and problem-solving skills.  
+Decision: Yes",,,
+84,Jonathan Peter,"Gorakhpur, Uttar Pradesh","Reason: Jonathan Peter has a high academic performance with 97.1% in class 10 and 80.2% in class 12. He also scored 96 percentile in the scholarship exam and has participated in various extracurricular activities. His annual family income is ₹2.7 lakh, which is below the ₹8 lakh threshold. Decision: Yes",,,
+85,Vivek Chaurasia,"Gorakhpur, Uttar Pradesh","Reason: Vivek Chaurasia demonstrates strong academic credentials (B.Tech 2027, CGPA 9.26/10 from a top engineering college), relevant project experience in web app development using modern stacks (React, Node.js, Kotlin), and a high online coding assessment score (72 percentile), indicating technical proficiency. These factors align well with the requirements for a Software Engineer role, making him a strong candidate for technical interview consideration.  
+Decision: Yes",,,
+86,Bitopan Mahanta,"Golaghat, Assam","Reason: Bitopan Mahanta has an excellent academic record with 94.8% in Class 10 and 96.2% in Class 12, and his family income of ₹4.8 lakh is well below the ₹8 lakh threshold. While his scholarship entrance exam percentile is low at 22, the foundation's merit-cum-means criteria prioritize academic excellence and financial need, both of which he meets. His admission to a B.Tech program in Civil Engineering also aligns with long-term merit goals.
+
+Decision: Yes",,,
+87,Gaurav Sonkar,"Meerut, Uttar Pradesh","Reason: Gaurav Sonkar has a family income below ₹8 lakh, meets academic criteria, and has a high percentile in the scholarship test. However, he has no extracurricular activities, which may indicate limited involvement beyond academics. Decision: Yes",,,
+88,Hiranya Goswami,"Jorhat, Assam","Reason: Hiranya की शैक्षणिक प्रोफ़ाइल में कक्षा 10 में उत्कृष्ट प्रदर्शन (94%) है, लेकिन कक्षा 12 में गिरावट (80.9%) और छात्रवृत्ति परीक्षा में मध्यम रैंक (63 पर्सेंटाइल) चिंता का विषय है। हालाँकि, उनकी पारिवारिक आय (₹7.4 लाख) पात्रता मानदंड को पूरा करती है। इंजीनियरिंग में प्रवेश और गणित ओलंपियाड में भागीदारी संभावित क्षमता दर्शाती है। समग्र प्रदर्शन और सामाजिक-आर्थिक पृष्ठभूमि को ध्यान में रखते हुए, छात्रवृत्ति से उनके शैक्षणिक सफर को सहायता मिल सकती है।  
+Decision: Yes",,,
+89,Shweta Shukla,"Varanasi, Uttar Pradesh","Reason: Shweta has a strong academic background with a high CGPA and excellent performance in the online coding assessment. Her projects demonstrate practical coding and problem-solving skills using relevant technologies. She also has relevant internship experience.  
+Decision: Yes",,,
+90,Danish Usmani,"Gorakhpur, Uttar Pradesh","Reason: Danish Usmani का आवेदन छात्रवृत्ति के लिए योग्य है। उसका कक्षा 10 और 12 की बोर्ड परीक्षाओं में अद्वितीय प्रदर्शन, छात्रवृत्ति अभिरुचि परीक्षा में 93 पर्सेंटाइल, और पाठ्येतर गतिविधियों में भी उत्कृष्ट प्रदर्शन है। उसकी वार्षिक पारिवारिक आय ₹2.7 लाख है, जो ₹8 लाख से कम है। इन सभी तथ्यों के आधार पर, वह मेरिट-कम-मीन्स छात्रवृत्ति के लिए योग्य है।
+
+Decision: Yes",,,
+91,Bhaskarjyoti Kakati,"Nagaon, Assam","Reason: Bhaskarjyoti has a stable job, high income, and a good credit score. His monthly income covers the loan EMIs with some surplus. The loan amount is reasonable for the repayment period. However, the purpose is for home repairs, which may not align with the bank's standard personal loan criteria.  
+Decision: No",,,
+92,Abhishek Sachan,"Bareilly, Uttar Pradesh","Reason: The candidate has a strong academic background with a high CGPA from a top-ranked college. However, the lack of internships and a low percentile in the coding assessment may indicate limited practical experience and technical proficiency. A technical interview could help assess their problem-solving abilities and potential.
+
+Decision: Yes",,,
+93,Shahid Rizvi,"Agra, Uttar Pradesh","Reason: Shahid Rizvi की पारिवारिक आय (₹4.9 लाख) पात्रता सीमा से नीचे है। उसके शैक्षणिक स्कोर (कक्षा 10: 85.2%, कक्षा 12: 82%) और कोडिंग क्लब में भागीदारी ने संतुलित प्रदर्शन दिखाया है, हालाँकि छात्रवृत्ति परीक्षा (61 पर्सेंटाइल) कमजोर है। समग्र रूप से, मेरिट और आवश्यकता के मानदंडों को पूरा किया गया है।  
+Decision: Yes",,,
+94,Joel John,"Prayagraj, Uttar Pradesh","Reason: Joel John, a 38-year-old salaried sales officer with a stable 1-year employment history and a net monthly income of ₹41,000, has a credit score of 710, indicating a reasonable creditworthiness. His existing EMI of ₹12,900 is substantial, consuming 31.46% of his income, which is a considerable debt-to-income ratio. However, the requested loan amount of ₹2,30,000 over 36 months keeps the additional debt burden within manageable limits, given his income. The loan purpose is for essential household items. 
+
+Decision: Yes.",,,
+95,Saurabh Kori,"Agra, Uttar Pradesh","Reason: Saurabh Kori has a high academic performance with 96.5% in class 10 and 96.6% in class 12. He also scored 97 percentile in the scholarship exam. His family's annual income is ₹1.8 lakh, which is below the ₹8 lakh threshold. He is interested in B.Tech in Civil Engineering and has participated in various academic and extracurricular activities.  
+Decision: Yes",,,
+96,Vignesh Iyer,"Madurai, Tamil Nadu","कारण: Vignesh की पारिवारिक आय (₹4.9 लाख) पात्रता सीमा से कम है। उसके शैक्षणिक प्रदर्शन में स्थिरता (कक्षा 10 में 85.2%, कक्षा 12 में 82%) और कोडिंग क्लब में भागीदारी भी है। हालाँकि, छात्रवृत्ति परीक्षा (61 पर्सेंटाइल) औसत है, लेकिन समग्र प्रोफ़ाइल मेरिट और ज़रूरत दोनों को संतुलित करती है।  
+निर्णय: हाँ",,,
+97,Pranjal Sarma,"Guwahati, Assam","Reason: Pranjal Sarma का स्नातक होने वाला बैच है, और वह कंप्यूटर विज्ञान एवं इंजीनियरिंग में बी.टेक की अंतिम वर्ष की छात्रा है। उसके सीजीपीए रेटिंग 6.13 है, जो मध्यम है, लेकिन ऑनलाइन कोडिंग मूल्यांकन 33 पर्सेंटाइल है, जो कम है। उसके पास कोई इंटर्नशिप का अनुभव नहीं है, लेकिन वह एक कोर्स मिनी-प्रोजेक्ट पर काम कर रही है, जो स्टूडेंट रिकॉर्ड्स सिस्टम है। इस प्रोफ़ाइल के आधार पर, वह तकनीकी साक्षात्कार दौर के लिए शॉर्टलिस्ट की जा सकती है।
+
+Decision: Yes",,,
+98,Vivek Chaurasia,"Gorakhpur, Uttar Pradesh","Reason: Vivek Chaurasia के परिवार की वार्षिक आय ₹7.9 लाख है, जो ₹8 लाख से कम है, जो छात्रवृत्ति के पात्रता मानदंड को पूरा करता है। उनके अंक भी अच्छे हैं, जबकि पाठ्येतर गतिविधियों की कमी उनकी अन्य गतिविधियों की कमी को दर्शाती है। इसलिए, उन्हें छात्रवृत्ति देना उचित होगा।  
+Decision: Yes",,,
+99,Anurag Dixit,"Meerut, Uttar Pradesh","Reason: Anurag Dixit के उत्कृष्ट CGPA (9.45/10), उच्च पर्सेंटाइल (87%) ऑनलाइन कोडिंग मूल्यांकन, तकनीकी कौशल वाले प्रोजेक्ट और 4 महीने की इंटर्नशिप के साथ, उम्मीदवार के तकनीकी क्षमता और अनुभव के आधार पर उन्हें तकनीकी साक्षात्कार के लिए शॉर्टलिस्ट करना उचित होगा।  
+Decision: Yes",,,
+100,Danish Usmani,"Gorakhpur, Uttar Pradesh","Reason: The applicant has a stable job, sufficient income (₹79,000/month), low existing EMIs (₹300), a good credit score (822), and a reasonable loan-to-income ratio. Requested EMI for ₹1,30,000 over 36 months is ~₹3,611, which is 4.5x his net income—exceeds comfort zone and risk threshold.  
+Decision: No",,,
+101,Srinivas Iyengar,"Mysuru, Karnataka","Reason: Srinivas की कक्षा 12 में 80.9% और छात्रवृत्ति परीक्षा में 63 पर्सेंटाइल अच्छे प्रदर्शन को दर्शाते हैं। गणित ओलंपियाड में भागीदारी ने उनकी तकनीकी रुचि को दिखाया। ₹7.4 लाख की आय पात्रता मानदंडों को पूरा करती है। हालाँकि, कक्षा 10 (94%) और 12 के बीच प्रदर्शन में गिरावट चिंता का विषय है, लेकिन यह इंजीनियरिंग के प्रति प्रतिबद्धता के साथ संतुलित है। समग्र रूप से, मेरिट और आवश्यकता के आधार पर योग्य।  
+Decision: Yes",,,
+102,Rohit Pasi,"Prayagraj, Uttar Pradesh","Reason: Rohit has a strong academic background with a 6.51 CGPA and a 19th percentile in online coding. His projects in Java, WebSockets, Python, and OpenCV show technical skills. Although his college is not in NIRF ranking, his practical experience and project work are commendable.  
+Decision: Yes",,,
+103,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya's CGPA is above the average for her college, and her online coding assessment percentile is above the median. She has relevant projects and internship experience, which indicates practical application of her skills. However, her age and graduation year are slightly later than ideal, and her college ranking is not in the top tier.
+
+Decision: Yes",,,
+104,Sachin Pathak,"Gorakhpur, Uttar Pradesh","Reason: Sachin meets the income criterion (₹7.7 lakh < ₹8 lakh) and is admitted to a B.Tech program. However, his academic performance (69.8% in Class 10, 67.0% in Class 12) and 44th percentile in the aptitude test are below average, and he has no extracurricular involvement. These factors may indicate limited potential for academic success or leadership.
+
+Decision: No",,,
+105,Vivek Khatik,"Gorakhpur, Uttar Pradesh","Reason: Vivek Khatik’s family income is ₹2.7 lakh per year, which is below the ₹8 lakh threshold for merit-based scholarships. Although he has strong academic scores (86% in Class 10, 94.2% in Class 12, and a high interest test score), the primary criterion for the merit-minimum scholarship is financial need. Since his family falls well within the eligible income bracket, providing him with a scholarship based on merit alone would be unfair to students from financially disadvantaged backgrounds who also meet the academic criteria. Therefore, he should not be awarded the scholarship under these criteria.  
+Decision: No",,,
+106,Neha Tiwari,"Kanpur, Uttar Pradesh","Reason: Neha has a stable income, a reasonable credit score, and a low existing EMI burden. Her loan purpose is for medical expenses, which is a valid need. The repayment period is manageable, and her employment history is sufficient. Her debt-to-income ratio is acceptable.  
+Decision: Yes",,,
+107,Vignesh Iyer,"Madurai, Tamil Nadu","Reason: Vignesh has a relevant degree, a decent CGPA, and projects in web and real-time applications. His online coding percentile is moderate, but his internship shows practical experience. While not outstanding, his profile shows potential and aligns with the role. Decision: Yes",,,
+108,Srinivas Iyengar,"Mysuru, Karnataka","Reason: Srinivas has a family income just below the ₹8 lakh threshold, meets the income criterion, and is admitted to a relevant undergraduate program. His academic performance is adequate but not outstanding, and he has no extracurricular activities. However, the scholarship aims to support merit-cum-means, and his income qualifies him. Decision: Yes",,,
+109,Stephen Francis,"Varanasi, Uttar Pradesh","Reason: Stephen has a stable job, good credit score, and sufficient income to cover the loan EMI. His net income of ₹49,000 covers the ₹18,000 EMI with some buffer. The loan amount of ₹2,60,000 over 36 months is manageable. Decision: Yes",,,
+110,Nilotpal Barthakur,"Sivasagar, Assam","कारण: उच्च क्रेडिट स्कोर (801), स्थिर रोजगार (7 वर्ष), और पर्याप्त आय (₹1.05 लाख/माह) ऋण चुकाने की क्षमता दर्शाते हैं। मौजूदा EMI (₹5,200) नई EMI (≈₹6,200) के साथ manageable है, जो debt-to-income ratio (~7%) को कम रखता है। लैपटॉप/घरेलू उपकरणों के लिए ऋण का उद्देश्य स्पष्ट है और जोखिम कम है।  
+निर्णय: हाँ",,,
+111,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya Mishra की शुद्ध मासिक आय ₹19,000 है और वह एक स्थिर वेतनभोगी है। उसका क्रेडिट स्कोर 727 (अच्छा) है और वर्तमान नियोक्ता के साथ 2 वर्ष का अनुभव है। मौजूदा ईएमआई कम है। ऋण का उद्देश्य चिकित्सा खर्च है, जो आवश्यक है। आय और ऋण के अनुपात के आधार पर ईएमआई वहनीय होगी।
+
+Decision: Yes",,,
+112,Pooja Pandey,"Prayagraj, Uttar Pradesh","Reason: Pooja has a strong academic background with a high CGPA, top-tier college, and good online coding percentile. She has relevant projects in Python and Java, and relevant internship experience. She meets the technical requirements for the role.  
+Decision: Yes",,,
+113,Jaskaran Singh,"Prayagraj, Uttar Pradesh","Reason: Jaskaran has a stable job, a good credit score, and his income covers his existing EMI. However, his debt-to-income ratio is high (31.5%), which may raise concerns about his ability to manage additional debt. The loan purpose is reasonable, but the risk of overburdening him is present.
+
+Decision: No",,,
+114,Vivek Khatik,"Gorakhpur, Uttar Pradesh","Reason: The applicant's monthly income is ₹26,000, with a current EMI of ₹7,900 (about 30% of income), and a requested loan of ₹3,00,000 for 36 months, resulting in an EMI of ~₹8,333 (over 32% of income). While the credit score is 610 (fair), the high EMI relative to income suggests risk of loan repayment difficulty. Decision: No",,,
+115,Rituraj Baruah,"Dibrugarh, Assam","Reason: The candidate, Rituraj Baruah, has a family annual income of ₹2.7 lakh, which is below the ₹8 lakh eligibility threshold for the Merit-Cum-Means scholarship. Although he has strong academic scores (CBSE 10th: 86%, 12th: 94.2%) and active participation in extracurricular activities, the primary criterion for the scholarship is financial need. Since his family income falls well within the eligible range, he does not qualify for the merit-cum-means benefit.  
+Decision: No",,,
+116,Abhishek Kureel,"Bareilly, Uttar Pradesh","Reason: Abhishek has a stable income, a good credit score, and a manageable debt-to-income ratio. His existing EMIs are within acceptable limits, and the loan purpose is reasonable. The repayment period is reasonable for the loan amount. Decision: Yes",,,
+117,Vishnu Namboothiri,"Thrissur, Kerala","Reason: Vishnu has a strong academic background with a high CGPA and is in his final year of B.Tech. His projects show practical coding skills in JavaScript and Python. However, his online coding assessment percentile is moderate. He has an internship, which is a positive factor. Overall, he meets basic requirements but may need further evaluation.  
+Decision: Yes",,,
+118,Rohit Maurya,"Prayagraj, Uttar Pradesh","Reason: Rohit has a decent academic record (7.6 CGPA) and relevant projects demonstrating hands-on experience. However, his coding assessment percentile (56th) is below average for entry-level roles, and his internship is short (2 months). While his skills show potential, the low percentile and limited internship experience may indicate gaps in problem-solving proficiency.  
+
+Decision: No",,,
+119,Ritu Trivedi,"Agra, Uttar Pradesh","Reason: Ritu Trivedi demonstrates strong academic credentials (B.Tech in Computer Science and Engineering from a recognized college with a high CGPA), relevant project experience (web app development using modern stacks like React, Node.js, Python, and OpenCV), and no internship history, which may indicate limited practical exposure. However, her online coding assessment score (75 percentile) and technical skills align well with the requirements for a software engineering role. Considering the balance between theoretical knowledge and the need for hands-on experience, her profile is moderately suitable but may benefit from additional practical training or internships before final selection.  
+Decision: No",,,
+120,Raghavendra Bhat,"Udupi, Karnataka","Reason: Raghavendra has a stable salaried job with a net income of ₹49,000, but his existing EMI of ₹17,600 leaves limited room for another ₹2,60,000 loan over 36 months. His credit score is fair, but the loan-to-income ratio is high, increasing default risk. Medical expenses are a valid purpose, but the repayment capacity is questionable.
+
+Decision: No",,,
+121,Bitopan Mahanta,"Golaghat, Assam","Reason: Bitopan Mahanta's annual family income is ₹7.8 lakh, just below the ₹8 lakh threshold. His academic performance is moderate, and he has no extracurricular activities. However, the scholarship criteria prioritize income, and he meets the financial requirement. Decision: Yes",,,
+122,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya Mishra का परीक्षा रिकॉर्ड और परिवार की आय दोनों पात्रता के मानदंडों को पूरा करते हैं। परीक्षा रिकॉर्ड में कक्षा 10 और 12 में अच्छी नोट्स हैं, और छात्रवृत्ति अभिरुचि परीक्षा में भी अच्छा प्रदर्शन है। परिवार की वार्षिक आय ₹7.8 लाख है, जो ₹8 लाख से कम है। इसलिए, इस विद्यार्थी को छात्रवृत्ति दी जानी चाहिए।
+
+Decision: Yes",,,
+123,Ritu Trivedi,"Agra, Uttar Pradesh","Reason: Ritu Trivedi के पास उच्च क्रेडिट स्कोर (819) और स्थिर रोजगार है, जो उसकी आय के आधार पर ऋण के लिए उपयुक्त देखे जाने के योग्य है। उसकी वार्षिक आय ₹1,35,600 है, जो उसकी मौजूदा ईएमआई ₹10,700 के साथ भी संतुलित है। ऋण का उद्देश्य चिकित्सा खर्च होने के कारण भी उचित है।  
+Decision: Yes",,,
+124,Simon Paul,"Agra, Uttar Pradesh","Reason: Simon Paul demonstrates a strong academic background (B.Tech in Computer Science and Engineering, CGPA 7.28/10 from a recognized college), relevant project experience (real-time chat application using Java and WebSockets), and practical exposure in IT services development. These factors align well with the technical interview requirements for a software engineer role.  
+Decision: Yes",,,
+125,Ritu Trivedi,"Agra, Uttar Pradesh","Reason: Ritu has a stable job, a good credit score, and sufficient income to cover the loan EMIs. Her monthly income of ₹38,000 covers the ₹12,300 EMIs with some buffer. The loan amount of ₹2,20,000 over 36 months is reasonable. Decision: Yes",,,
+126,Faizan Khan,"Lucknow, Uttar Pradesh","Reason: Faizan Khan's family income of ₹5.8 lakh is below the ₹8 lakh threshold, making him eligible. He has a strong Class 10 score and a commendable scholarship aptitude test percentile, indicating academic potential. While his Class 12 score is lower, it may reflect other factors. His lack of extracurricular activities is a minor drawback but not disqualifying. Overall, he meets the financial criteria and shows academic promise.  
+Decision: Yes",,,
+127,Pranjal Sarma,"Guwahati, Assam","Reason: Pranjal has a family income below ₹8 lakh, strong academic performance, and a district-level debate win. His Class 10 and 12 scores are high, and his aptitude test score is in the 74th percentile. He meets the income criterion and shows academic and extracurricular excellence.  
+Decision: Yes",,,
+128,Ankit Bajpai,"Varanasi, Uttar Pradesh","Reason: Ankit has a strong academic background with a CGPA of 5.95, top 50 college rank, and a coding percentile of 67. His project on a student records system in C++ shows practical coding skills, and his 4-month internship in software development indicates relevant experience.  
+Decision: Yes",,,
+129,Jaskaran Singh,"Prayagraj, Uttar Pradesh","Reason: Jaskaran Singh's annual family income of ₹7.2 lakh is below the ₹8 lakh threshold. He has good academic performance with 69.6% in Class 10 and 70.3% in Class 12. His scholarship aptitude test score is above average, and he is admitted to a relevant undergraduate program. While he has no extracurricular activities, his academic and financial profile meets the scholarship criteria.  
+Decision: Yes",,,
+130,Srinivas Iyengar,"Mysuru, Karnataka","कारण: उम्मीदवार के पास मजबूत शैक्षणिक प्रदर्शन (CGPA 9.02) है, प्रासंगिक प्रोजेक्ट अनुभव (C++ में स्टूडेंट रिकॉर्ड सिस्टम) है, और सॉफ्टवेयर डेवलपमेंट इंटर्नशिप है। हालाँकि, कोडिंग मूल्यांकन (73rd percentile) औसत है, जो एंट्री-लेवल भूमिका के लिए स्वीकार्य है। NIRF रैंकिंग (101-200) संस्थान की गुणवत्ता को दर्शाती है। समग्र प्रोफ़ाइल तकनीकी क्षमता और सीखने की क्षमता को संतुलित करती है।  
+निर्णय: हाँ",,,
+131,Prasanna Hebbar,"Mangaluru, Karnataka","Reason: The applicant has a stable job, sufficient income (₹79,000/month), low existing EMIs (₹300), a good credit score (822), and a reasonable loan-to-income ratio. Requested EMI for ₹1,30,000 over 36 months is ~₹3,611, which is 4.5x income—exceeds comfort zone.  
+Decision: No",,,
+132,Gurjot Singh,"Gorakhpur, Uttar Pradesh","Reason: Gurjot has a strong academic background with a high CGPA and is in his final year of B.Tech. His projects show practical coding skills in Java and JavaScript. Although his online assessment percentile is moderate, his overall profile is competitive.  
+Decision: Yes",,,
+133,Neha Tiwari,"Kanpur, Uttar Pradesh","Reason: Neha has a stable job, a good credit score (717), and her monthly income of ₹20,000 covers her existing EMI of ₹7,000. The requested loan of ₹40,000 over 36 months is manageable, and the purpose (medical expenses) is legitimate. However, her debt-to-income ratio is high, which may raise concerns about repayment capacity.  
+Decision: No",,,
+134,Amit Valmiki,"Kanpur, Uttar Pradesh","Reason: Amit has a stable job with a monthly income of ₹50,000 and a credit score of 712, indicating good creditworthiness. His existing EMI of ₹17,000 leaves room for an additional ₹2,90,000 loan over 36 months. The purpose is medical expenses, which is a legitimate need. However, the lack of collateral and short employment duration may pose a risk.  
+Decision: No",,,
+135,Abhishek Sachan,"Bareilly, Uttar Pradesh","Reason: Abhishek has strong academic performance with high board scores, a family income below the eligibility threshold, and is admitted to a reputable engineering program. While his scholarship aptitude test score is low, it may not fully reflect his potential. His lack of extracurricular activities is a minor drawback but does not disqualify him. He demonstrates financial need and academic merit.  
+Decision: Yes",,,
+136,Pooja Pandey,"Prayagraj, Uttar Pradesh","Reason: Pooja की बी.टेक डिग्री (अंतिम वर्ष), उच्च सीजीपीए, शीर्ष 50 कॉलेज, तीन विविध प्रोजेक्ट, एक इंटर्नशिप और कोडिंग पर अच्छा पर्सेंटाइल उसकी तकनीकी क्षमता और जुनून को दर्शाते हैं। उसके पास विविध तकनीकी कौशल हैं जो एंट्री-लेवल भूमिका के लिए उपयुक्त हैं।
+
+Decision: Yes",,,
+137,Karthik Iyer,"Chennai, Tamil Nadu","Reason: Karthik's family income is below ₹8 lakh, meeting the eligibility criterion. His Class 10 score is strong, though his Class 12 score is low, and he has no extracurricular activities. However, his scholarship aptitude test score is high, indicating potential. Considering merit and financial need, he should be awarded the scholarship.  
+Decision: Yes",,,
+138,Faizan Khan,"Lucknow, Uttar Pradesh","Reason: Faizan Khan is a recent B.Tech graduate in Computer Science and Engineering from a college not ranked by NIRF, has a decent CGPA (5.83/10), some online coding experience (38 percentile), and is working on a mini-project related to student record systems in C++. While the profile shows foundational technical exposure and a relevant project, the lack of internships and the college's low NIRF ranking may limit his competitiveness for technical interviews, especially at more prestigious companies. However, for some roles or companies, this background could still be sufficient.  
+Decision: No",,,
+139,Vignesh Iyer,"Madurai, Tamil Nadu","Reason: Vignesh has a stable job, a good credit score (699), and his monthly income comfortably covers his existing EMI and the new loan. The loan purpose is for medical expenses, which is a legitimate need. His income-to-EMI ratio is favorable, indicating repayment capacity.  
+Decision: Yes",,,
+140,Rituraj Baruah,"Dibrugarh, Assam","Reason: Rituraj की शुद्ध मासिक आय ₹21,000 है, जिसमें से ₹10,900 ईएमआई के रूप में खर्च हो रहा है। इसके बाद भी उनकी आय ऋण के लिए पर्याप्त नहीं है। उनका क्रेडिट स्कोर 632 है, जो निम्न है। इसलिए ऋण के चुकौती के जोखिम के कारण इसे स्वीकृत करना उचित नहीं है।  
+Decision: No",,,
+141,Jaskaran Singh,"Prayagraj, Uttar Pradesh","Reason: Jaskaran has a relevant degree, a decent CGPA, and projects in web and computer vision. His internship shows practical experience. While the coding percentile is moderate, his projects demonstrate technical skills. The college ranking adds credibility. Overall, he shows potential for further development.  
+Decision: Yes",,,
+142,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya Mishra की प्रोफ़ाइल में कई कमजोरियाँ हैं। Firstly, her CGPA is below the average threshold for many companies, which could be a red flag. Secondly, her online coding assessment score is relatively low, indicating potential weaknesses in her technical skills. Additionally, she has not completed any internships, which is often a requirement for entry-level positions. Lastly, her college is not ranked in the NIRF engineering ranking, which might suggest a lower level of academic rigor. However, her project experience in C++ and her age (22 years) could be seen as positive factors. Decision: No",,,
+143,Neha Tiwari,"Kanpur, Uttar Pradesh","कारण: Neha की पारिवारिक आय ₹7.4 लाख है जो ₹8 लाख की सीमा से कम है। उसके अकादमिक स्कोर (10वीं में 94%, 12वीं में 80.9%) और गणित ओलंपियाड में भागीदारी ने मेरिट और कम-मीन्स मानदंडों को संतुलित किया है। छात्रवृत्ति परीक्षा की 63वाँ पर्सेंटाइल स्वीकार्य है, क्योंकि अन्य मजबूत प्रोफ़ाइल वाले आवेदकों के साथ संतुलन बनाया जाता है।  
+निर्णय: हाँ",,,
+144,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya's annual family income is ₹7.8 lakh, just below the ₹8 lakh threshold. She has good academic performance and is admitted to a relevant undergraduate program. While she has no extracurricular activities, the scholarship criteria focus on income and academic merit, which she meets. Decision: Yes",,,
+145,Nilotpal Barthakur,"Sivasagar, Assam","Reason: Nilotpal's stable salaried job (1 year), good credit score (710), and manageable debt-to-income ratio (existing EMI of ₹12,900 out of ₹41,000 income) suggest a responsible financial profile. The loan amount (₹2,30,000) seems reasonable for his stated purpose of purchasing a laptop and household appliances over 36 months. However, further scrutiny of his employment stability and exact financial obligations is advisable. 
+
+Decision: Yes.",,,
+146,Hiranya Goswami,"Jorhat, Assam","Reason: Hiranya has a stable job with a monthly income of ₹50,000, which covers her existing loan EMI of ₹17,000. Her credit score of 712 is good, and the requested loan of ₹2,90,000 over 36 months is manageable. The loan is for medical expenses, a legitimate purpose. Decision: Yes",,,
+147,Neha Tiwari,"Kanpur, Uttar Pradesh","Reason: Neha has a stable job with a monthly income of ₹20,000 and a credit score of 717. Her existing EMI of ₹7,000 leaves limited room for a new loan, but the purpose is medical, which is a priority. Her income and credit profile suggest she can manage the additional burden.
+
+Decision: Yes",,,
+148,Anjali Dubey,"Gorakhpur, Uttar Pradesh","Reason: Anjali की पारिवारिक आय ₹7.7 लाख है, जो पात्रता मानदंड (₹8 लाख से कम) को पूरा करती है। हालाँकि, उसके अकादमिक स्कोर (कक्षा 10: 69.8%, कक्षा 12: 67%) और छात्रवृत्ति परीक्षा (44 पर्सेंटाइल) में मध्यम प्रदर्शन है। कोई पाठ्येतर गतिविधियाँ नहीं हैं। मेरिट-कम-मीन्स के संतुलन में, आय पात्रता और अकादमिक/अन्य उपलब्धियों की सीमित प्रगति के बीच, समिति को प्राथमिकता के आधार पर निर्णय लेना चाहिए।  
+Decision: No",,,
+149,Ankit Bajpai,"Varanasi, Uttar Pradesh","Reason: Ankit has a strong academic background with a high CGPA and is in his final year. His projects show practical coding skills in Kotlin and Python. However, his online coding assessment percentile is moderate. His internship experience is limited. Overall, he has potential but may need further evaluation.  
+Decision: Yes",,,
+150,Aamir Ahmed,"Bareilly, Uttar Pradesh","Reason: Aamir Ahmed's annual family income of ₹2.2 lakh is below the ₹8 lakh threshold, qualifying him for the merit-based scholarship. His academic performance in class 10 (69.3%) and class 12 (81.1%) is strong, and he scored 31 percentile in the scholarship exam. Additionally, his involvement in science Olympiad, community literacy program, and school coding club demonstrates initiative and commitment.  
+Decision: Yes",,,
+151,Ritu Trivedi,"Agra, Uttar Pradesh","Reason: Ritu has a strong academic record with a high CGPA and is graduating in 2027. However, her online coding assessment score is only in the 36th percentile, which is below average. Her project experience is limited to a course-based mini-project, and she has no internships. While her academic background is solid, her coding skills and practical experience are not strong enough to justify shortlisting for a technical interview.  
+Decision: No",,,
+152,Shweta Shukla,"Varanasi, Uttar Pradesh","Reason: Shweta has a strong academic background with a high CGPA and percentile in coding. Her project and internship experience demonstrate practical skills in software development. She meets the criteria for shortlisting.  
+Decision: Yes",,,
+153,Anurag Dixit,"Meerut, Uttar Pradesh","Reason: Anurag meets all eligibility criteria—academic excellence (97.8% in Class 12), strong aptitude test (98th percentile), and family income (₹4.9 lakh) below the ₹8 lakh threshold. His extracurriculars add value.  
+
+Decision: Yes",,,
+154,Prasanna Hebbar,"Mangaluru, Karnataka","Reason: Prasanna has a stable income, a reasonable credit score, and a 2-year employment history. However, his existing EMIs of ₹15,400 are nearly 36% of his monthly income, leaving limited capacity for additional debt. A ₹2,40,000 loan over 36 months would add ₹7,778 in EMIs, increasing his debt burden to 58% of income, which is high risk. Decision: No",,,
+155,Danish Usmani,"Gorakhpur, Uttar Pradesh","Reason: The student's academic performance is above average, with Class 10 and 12 scores above 65%. However, the scholarship aptitude test score is below the median (44th percentile), which may indicate a lack of preparation or understanding of the test format. The annual family income is below the ₹8 lakh threshold, making the student eligible for the scholarship. The absence of extracurricular activities may not significantly impact the decision.
+
+Decision: Yes",,,
+156,Swati Chaturvedi,"Bareilly, Uttar Pradesh","Reason: Swati has a strong academic record with a high CGPA from a top-ranked college. Her B.Tech in Computer Science is relevant, and her C++ project shows some technical capability. However, her online coding assessment percentile is relatively low, and she has no internships or additional projects to demonstrate practical experience. The lack of hands-on experience may hinder her readiness for a software engineering role. Decision: No",,,
+157,Faizan Khan,"Lucknow, Uttar Pradesh","Reason: Faizan meets income criteria (₹7.2L < ₹8L), has strong academics (94.6% & 95.2%), but low aptitude test percentile (64th). While extracurriculars are absent, the scholarship prioritizes merit-cum-means. Aptitude score may indicate potential challenges, but academic excellence and financial need are strong.  
+
+Decision: Yes",,,
+158,Swati Chaturvedi,"Bareilly, Uttar Pradesh","Reason: Swati has a strong academic background from a reputable college and a high CGPA. However, she lacks internships and has only one course mini-project, which limits her practical experience. Her online coding assessment percentile is below average, indicating potential technical gaps. While her academic profile is solid, the lack of hands-on experience and weaker coding performance may hinder her suitability for the role at this stage.
+
+Decision: No",,,
+159,Deepak Ojha,"Bareilly, Uttar Pradesh","Reason: Deepak Ojha has a strong academic record with an impressive CGPA of 8.97 and attended a top-tier engineering college. His coding assessment places him in the 63rd percentile, indicating a solid understanding of programming concepts. Although he lacks internship experience, his single project, a Student Records System in C++, demonstrates practical application of skills. Given his final year status, he might still develop relevant experience before graduation. Decision: Yes.",,,
+160,Sachin Pathak,"Gorakhpur, Uttar Pradesh","Reason: Sachin Pathak, a 22-year-old Computer Science and Engineering senior from Gorakhpur, Uttar Pradesh, boasts a strong academic record (CGPA: 9.18/10) and a solid understanding of programming (online coding assessment: 65th percentile). His project experience includes developing a real-time chat application using Java and WebSockets, and creating a weather dashboard utilizing JavaScript and a public API. Although he lacks internship experience, his technical skills and relevant projects make him a suitable candidate for the Entry-Level Software Engineer position.
+
+Decision: Yes",,,
+161,Harpreet Singh,"Kanpur, Uttar Pradesh","Reason: Strong academic performance (9.02 CGPA) and a good coding assessment percentile (73rd) indicate technical aptitude. The C++ mini-project demonstrates relevant skills, and the internship provides practical exposure. However, the college ranking (101–200) and short internship duration (2 months) slightly temper the profile. Overall, the candidate shows promise for an entry-level role.  
+
+Decision: Yes",,,
+162,Shweta Shukla,"Varanasi, Uttar Pradesh","Reason: Shweta Shukla's annual family income of ₹5.5 lakh is below the ₹8 lakh threshold. She has excellent academic performance with 82.1% in class 10 and 85.0% in class 12. Her merit-based scholarship exam score of 67 percentile indicates she is competitive. Additionally, her involvement in extracurricular activities like inter-school debates and coding club further strengthens her application.  
+Decision: Yes",,,
+163,Ankit Prajapati,"Varanasi, Uttar Pradesh","Reason: Ankit Prajapati meets the income criterion for the merit-cum-means scholarship, with a family income of ₹7.4 lakh. He has strong academic performance in Class 10 and 12, scoring 71.1% and 84.9% respectively. However, his scholarship entrance exam percentile (32nd) is relatively low, and he has no extracurricular activities to add to his profile. While his academic record is commendable, the lack of extracurricular involvement and a lower entrance exam score may affect his overall merit.
+
+Decision: No",,,
+164,Srinivas Iyengar,"Mysuru, Karnataka","Reason: Srinivas has a strong academic background with a high CGPA and a relevant degree. His online coding assessment percentile is above average, indicating good problem-solving skills. He has a mini-project in C++ and a software development internship, demonstrating practical experience. However, his college ranking is not in the top tier, and he is still in his final year, which might be a concern.
+
+Decision: Yes",,,
+165,Gaurav Sonkar,"Meerut, Uttar Pradesh","Reason: Strong CGPA (6.48/10), relevant C++ project, and moderate coding percentile suggest basic technical capability, but lack of internship or stronger coding performance may limit competitiveness.  
+Decision: No",,,
+166,Karthik Iyer,"Chennai, Tamil Nadu","Reason: Karthik has a strong academic background with a high CGPA and top percentile in online coding assessments. His projects demonstrate proficiency in multiple technologies and languages, and his internship experience aligns with the role.  
+Decision: Yes",,,
+167,Balaji Iyengar,"Tiruchirappalli, Tamil Nadu","Reason: Balaji has a stable job with 7 years of experience, a high net monthly income, and a reasonable credit score. However, his existing loan EMI is high, which may impact his ability to repay the new loan. The loan amount and repayment period are also significant, which could strain his financial situation.
+
+Decision: No",,,
+168,Gaurav Sonkar,"Meerut, Uttar Pradesh","Reason: Gaurav's family income is below the ₹8 lakh threshold, and he has a good academic record with Class 10 and 12 percentages above 69%. However, his scholarship aptitude test score is below the 50th percentile, which might indicate a lack of preparation or understanding of the test format. Additionally, he has no extracurricular activities listed, which could be a factor in the scholarship decision.
+
+Decision: No",,,
+169,Abhishek Kureel,"Bareilly, Uttar Pradesh","Reason: The candidate has a strong academic background with a high CGPA from a top-ranked college. However, the lack of internships and a low percentile in the coding assessment may indicate limited practical experience and technical proficiency. A technical interview could help assess their problem-solving abilities and potential.
+
+Decision: Yes",,,
+170,Samuel Thomas,"Lucknow, Uttar Pradesh","Reason: Samuel Thomas का कॉलेज NIRF इंजीनियरिंग रैंकिंग में 51–100 में शामिल है, जो एक मध्यम स्तर का कॉलेज है। उसके सीजीपीए 8.78 / 10 है, जो एक मध्यम स्तर का अंका है। ऑनलाइन कोडिंग मूल्यांकन 18 पर्सेंटाइल है, जो एक मध्यम स्तर का अंका है। उसके प्रोजेक्ट स्टूडेंट रिकॉर्ड्स सिस्टम (C++) है, जो एक मध्यम स्तर का प्रोजेक्ट है। उसके इंटर्नशिप एक आईटी सर्विसेज़ कंपनी में सॉफ़्टवेयर डेवलपमेंट इंटर्न, 1 महीना है, जो एक मध्यम स्तर का इंटर्नशिप है। इसलिए, Samuel Thomas को तकनीकी साक्षात्कार के लिए शॉर्टलिस्ट किया जाना चाहिए।
+
+Decision: Yes",,,
+171,Anjali Dubey,"Gorakhpur, Uttar Pradesh","Reason: Anjali has a strong academic background with a high CGPA and excellent coding percentile. Her projects demonstrate proficiency in Python, Java, and machine learning tools. The internship in a product company shows practical experience.  
+Decision: Yes",,,
+172,Ritu Trivedi,"Agra, Uttar Pradesh","Reason: Ritu Trivedi's annual family income is ₹7.8 lakh, just below the ₹8 lakh threshold. However, her scholarship aptitude test score is only 24th percentile, which is low. While her academic performance in Class 10 is strong, her Class 12 result and lack of extracurricular activities raise concerns about her overall potential. The foundation's criteria prioritize both merit and means, and her test score may disqualify her despite her financial need.  
+Decision: No",,,
+173,Jonathan Peter,"Gorakhpur, Uttar Pradesh","Reason: Strong academic performance (9.18 CGPA) and relevant projects demonstrate technical skills. However, lack of internships and only 65th percentile in coding assessment may indicate average practical experience. Balanced profile with potential for growth.  
+
+Decision: Yes",,,
+174,Rohit Tripathi,"Prayagraj, Uttar Pradesh","Reason: The candidate's family annual income is ₹5.8 lakh, which is below ₹8 lakh. Their academic scores are relatively strong (especially CBSE 12th at 82.1%), and they have community service experience. However, the threshold for merit-based scholarship is not specified in the question. Assuming the threshold is the income criterion (as implied by the problem statement), Rohit qualifies as his family income is below ₹8 lakh. Therefore, Decision: Yes.",,,
+175,Anjali Dubey,"Gorakhpur, Uttar Pradesh","Reason: Anjali Dubey is in her final year of B.Tech in Computer Science with a CGPA of 6.46, which is below average. Her online coding percentile (32) indicates limited coding proficiency. She lacks internships and has only a basic course project in C++. These factors suggest she may not meet the technical standards required for the Associate Software Engineer role at this stage.
+
+Decision: No",,,
+176,Nidhi Upadhyay,"Meerut, Uttar Pradesh","Reason: Nidhi demonstrates strong academic potential (high 10th grade, moderate 12th), above-average test scores, and diverse extracurricular achievements despite lower 12th board marks, and comes from a low-income background, making her a deserving candidate.  
+Decision: Yes",,,
+177,Vivek Pathak,"Gorakhpur, Uttar Pradesh","Reason: Vivek has a stable job, high income, and a good credit score. His monthly income covers the loan EMIs with some buffer. The loan amount is reasonable for medical expenses, and the repayment period is manageable. Decision: Yes",,,
+178,Harjot Singh,"Bareilly, Uttar Pradesh","Reason: Harjot Singh की आय ₹1,12,000 है और वर्तमान ईएमआई ₹42,900 है, जिससे उसका आय-ईएमआई अनुपात 38% है। नए ऋण के बाद यह 68% तक पहुंच जाएगा, जो बैंक के नियमों के अनुरूप नहीं है। उसका क्रेडिट स्कोर (824) अच्छा है, लेकिन ऋण की राशि उच्च है और उद्देश्य आवश्यकता से अधिक है।
+
+Decision: No",,,
+179,Saurabh Agnihotri,"Agra, Uttar Pradesh","Reason: The applicant's monthly income is ₹1,17,000, and the requested loan amount is ₹13,50,000 for 36 months, resulting in EMI of ₹8,200/month (which is about 70% of his income). This is a high-risk loan for someone with a credit score of 645 (not very high) and no collateral. Therefore, I cannot approve the loan.  
+Decision: No",,,
+180,Prasanna Hebbar,"Mangaluru, Karnataka","Reason: Prasanna Hebbar's annual family income of ₹5.2 lakh is below the ₹8 lakh threshold. He has strong academic performance with 82.5% in class 10 and 85.9% in class 12. His merit-based entrance exam score is in the 61th percentile, indicating good academic potential. He is also involved in extracurricular activities, which adds to his overall profile.  
+Decision: Yes",,,
+181,Daniel Joseph,"Kanpur, Uttar Pradesh","Reason: Daniel Joseph has a stable job in the logistics sector with a monthly income of ₹20,000. His existing EMIs are ₹7,000, leaving ₹13,000 for monthly expenses. The requested loan of ₹40,000 over 36 months would add ₹11,111 to his EMI, which is manageable. His credit score of 717 is good, and the loan purpose is for medical expenses, which is a valid and urgent need.  
+Decision: Yes",,,
+182,Amit Awasthi,"Kanpur, Uttar Pradesh","Reason: Amit Awasthi meets the income criterion (₹7.5 lakh < ₹8 lakh) and is admitted to a first-year undergraduate program in Physics. His academic performance is satisfactory with Class 10 (73.1%) and Class 12 (68.1%) marks, though not exceptional. The scholarship aptitude test score places him at the 38th percentile, indicating average performance. With no extracurricular activities listed, there are no additional points for involvement. Given the criteria prioritize merit and means, and considering Amit's academic standing and income level align with the scholarship requirements, he appears eligible.
+
+Decision: Yes",,,
+183,Shweta Shukla,"Varanasi, Uttar Pradesh","Reason: Shweta Shukla has a stable job with a monthly income of ₹49,000, which covers her existing loan EMI of ₹18,000. Her credit score of 721 is good, indicating responsible financial behavior. The requested loan of ₹2,30,000 over 36 months is manageable, and the purpose is for medical expenses, which is a valid and urgent need.  
+Decision: Yes",,,
+184,Shweta Shukla,"Varanasi, Uttar Pradesh","Reason: Shweta Shukla demonstrates a strong academic background with an impressive CGPA of 8.74 and a top-tier college ranking. Her coding skills are evident from her percentile ranking and diverse project portfolio, including applications in Java, JavaScript, and Python. The internship at a product company further validates her practical experience. These factors collectively suggest she possesses the necessary technical skills and potential for success in an Associate Software Engineer role. 
+
+Decision: Yes",,,
+185,Pankaj Bajpai,"Varanasi, Uttar Pradesh","Reason: Low CGPA (5.81/10), unranked college, no internships, and below-average coding assessment (24th percentile) indicate limited technical proficiency and practical experience. The single course project lacks significance.  
+
+Decision: No",,,
+186,Amit Valmiki,"Kanpur, Uttar Pradesh","Reason: Amit का क्रेडिट स्कोर (717) अच्छा है और उसकी आय ऋण के भुगतान के लिए पर्याप्त लगती है। उसके पास 1 वर्ष का रोजगार है, लेकिन मौजूदा ईएमआई (₹7,000) के साथ ऋण के बाद आय का बोझ बढ़ेगा। ऋण का उद्देश्य चिकित्सा खर्च है, जो आवश्यक है, लेकिन अतिरिक्त जांच की आवश्यकता है।
+
+Decision: No",,,
+187,Sachin Pathak,"Gorakhpur, Uttar Pradesh","Reason: Sachin has a stable job (8 years with current employer), high credit score (825), and manageable existing EMI (₹6k vs ₹1.08L income). Medical expenses are a valid purpose, and repayment capacity seems adequate with a 36-month tenure. Low risk profile.  
+Decision: Yes",,,
+188,Vivek Chaurasia,"Gorakhpur, Uttar Pradesh","Reason: Vivek Chaurasia is an 18-year-old student with strong academic performance (10th: 86%, 12th: 94.2%), high interest in merit-based scholarships (93% in the scholarship test), and a family annual income of only ₹2.7 lakh, which is below the ₹8 lakh eligibility threshold. Although his 12th-grade score is impressive, the primary criterion for the merit scholarship is likely financial need, as indicated by the low family income. Therefore, he qualifies for the Merit-Common-Means scholarship based on financial eligibility.  
+Decision: Yes",,,
+189,Priya Mishra,"Lucknow, Uttar Pradesh","Reason: Priya has a strong academic background with a high CGPA and is final year B.Tech. She has relevant projects in Java and Python, showing technical skills. Her 59th percentile in the online assessment is moderate but not exceptional. No internship experience.  
+Decision: Yes",,,
+190,Anjali Dubey,"Gorakhpur, Uttar Pradesh","Reason: Anjali Dubey is an 18-year-old student starting her B.A. in Economics with strong academic performance (10th: 86%, 12th: 94.2%), high interest in merit-based scholarships, and a family annual income of only ₹2.7 lakh, which is below the ₹8 lakh eligibility threshold. Her extracurricular involvement shows dedication and leadership skills. Given her financial need and excellent academic record, she should be considered for the merit-minimum scholarship.  
+Decision: Yes",,,
+191,Gurpreet Singh,"Lucknow, Uttar Pradesh","Reason: Gurpreet Singh has a family income below ₹8 lakh, strong academic performance, and a notable extracurricular achievement. His scholarship aptitude test score is in the 74th percentile, indicating potential. He meets the income criterion and shows academic and extracurricular merit.  
+Decision: Yes",,,
+192,Amit Valmiki,"Kanpur, Uttar Pradesh","Reason: Strong academic performance (9.02 CGPA) and a good coding assessment percentile (73rd) indicate technical aptitude. The C++ mini-project demonstrates relevant skills, and the internship provides practical exposure. However, the college ranking (101–200) and short internship duration (2 months) slightly dilute the profile. Overall, the candidate shows promise for an entry-level role.  
+
+Decision: Yes",,,
+193,Swati Chaturvedi,"Bareilly, Uttar Pradesh","Reason: Swati meets the income criterion but has a low scholarship aptitude score. Her academic performance is strong, but the scholarship prioritizes merit and potential. Her lack of extracurricular involvement further weakens her case.  
+Decision: No",,,
+194,Ankit Ahirwar,"Varanasi, Uttar Pradesh","Reason: Ankit has a stable job with a good income, a reasonable credit score, and a clear purpose for the loan. His existing EMI is manageable, and the requested loan amount is within his income capacity. Decision: Yes",,,
+195,Manpreet Singh,"Varanasi, Uttar Pradesh","Reason: Manpreet Singh, a final-year B.Tech student with a strong CGPA of 7.11 from a reputable engineering college, demonstrates technical aptitude through projects in Kotlin and Python. His internship experience and coding assessment percentile, though not exceptional, show practical exposure. His profile suggests a solid foundation for the role. Decision: Yes.",,,
+196,Bhaskarjyoti Kakati,"Nagaon, Assam","Reason: विद्यार्थी की वार्षिक पारिवारिक आय ₹8 लाख से कम है और उसने कक्षा 10 में उत्कृष्ट अंक प्राप्त किए हैं। हालांकि कक्षा 12 के अंक कम हैं, लेकिन छात्रवृत्ति परीक्षा में 94 पर्सेंटाइल प्राप्त करना उसकी क्षमता को दर्शाता है। इसलिए, वह मेरिट-कम-मीन्स छात्रवृत्ति के लिए पात्र है।
+
+Decision: Yes",,,
+197,Amit Kushwaha,"Kanpur, Uttar Pradesh","Reason: Amit has a relevant degree, a decent CGPA, and some practical experience through projects and a short internship. His online coding assessment percentile is moderate, but his projects demonstrate technical skills in Java, Python, and tools like WebSockets and OpenCV. However, his CGPA and assessment percentile may not meet the company's threshold for a technical interview.  
+Decision: No",,,
+198,Vignesh Iyer,"Madurai, Tamil Nadu","Reason: Vignesh Iyer का क्रेडिट स्कोर 721 है, जो मध्यम है। शुद्ध मासिक आय ₹22,000 है, जो ऋण की चुकौती के लिए पर्याप्त है। मौजूदा ऋण ईएमआई ₹12,200 प्रति माह है, जो ऋण की चुकौती के लिए भी पर्याप्त है। ऋण का उद्देश्य घर की मरम्मत है, जो एक सकारात्मक उद्देश्य है। Decision: Yes",,,
+199,Jonathan Peter,"Gorakhpur, Uttar Pradesh","Reason: Jonathan has a B.Tech in Computer Science and Engineering, but his college is not NIRF-ranked, and his CGPA (6.46) and coding percentile (32%) are below average. He lacks internship experience and has only a minor project. These factors may limit his readiness for an entry-level software engineering role.  
+Decision: No",,,
+200,Vivek Chaurasia,"Gorakhpur, Uttar Pradesh","Reason: Vivek has a stable job with a monthly income of ₹23,000, which covers his existing loan EMIs of ₹7,200. His credit score of 823 is good, and the requested loan of ₹40,000 for medical expenses is reasonable. The repayment period of 36 months is manageable. Decision: Yes",,,

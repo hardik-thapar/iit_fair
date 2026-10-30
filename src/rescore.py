@@ -84,8 +84,15 @@ def main():
     tok = m.llm.get_tokenizer()
 
     dec = [json.loads(l) for l in open(ROOT / "data/benchmark/decision.jsonl", encoding="utf-8")]
-    score_pass(m, tok, [{"id": d["id"], "messages": d["messages"]} for d in dec],
-               Cache(out / "decision_scored.jsonl"), "decision_scored")
+    # Only rows where the first-token readout caught < 90% of the probability need full scoring;
+    # elsewhere both readouts agree to within the missing mass (< 0.1).
+    first = {r["id"]: (r.get("first_token_total") or 0) for r in Cache(out / "decision.jsonl").rows.values()}
+    need = [{"id": d["id"], "messages": d["messages"]} for d in dec if first.get(d["id"], 0) < 0.9]
+    score_pass(m, tok, need, Cache(out / "decision_scored.jsonl"), "decision_scored")
+    if os.environ.get("SKIP_SELFPRED_SCORING", "1") == "1":
+        sp_skip = True
+    else:
+        sp_skip = False
 
     # self-prediction prompts: rebuild exactly as run_model did, from its cached rows' ids
     import src.run_model as rm  # reuse prompt construction
@@ -108,7 +115,8 @@ def main():
                                                        cf_attribute_phrase=phrase)
             sp_items.append({"id": f"{d['id']}|{cond}", "messages": ref["messages"] + [
                 {"role": "assistant", "content": own}, {"role": "user", "content": q}]})
-    score_pass(m, tok, sp_items, Cache(out / "selfpred_scored.jsonl"), "selfpred_scored")
+    if not sp_skip:
+        score_pass(m, tok, sp_items, Cache(out / "selfpred_scored.jsonl"), "selfpred_scored")
 
     # explanations that hit the length limit: regenerate with a larger limit
     ex = Cache(out / "explain.jsonl").rows.values()

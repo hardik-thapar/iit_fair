@@ -16,3 +16,5 @@ paper/*.synctex.gz
 paper/*.fls
 paper/*.fdb_latexmk
 data/benchmark/*.jsonl
+results/raw/
+logs/server/

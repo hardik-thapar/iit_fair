@@ -1,0 +1,17 @@
+{
+ "models": [
+  "qwen3-4b",
+  "qwen3-8b",
+  "qwen3-14b",
+  "qwen3-32b",
+  "granite-3.3-8b",
+  "olmo-3-7b",
+  "ministral-8b",
+  "sarvam-m"
+ ],
+ "n_profiles": 150,
+ "bootstrap_B": 10000,
+ "seed": 20261030,
+ "n_sig_holm": 27,
+ "n_tests": 64
+}
