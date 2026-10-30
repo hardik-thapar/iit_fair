@@ -2,11 +2,11 @@
 
 ## Compute
 
-- Total GPU minutes logged: 109.9 (1.83 h) over 24 jobs  `[src: logs/gpu_budget.csv minutes]`
+- Total GPU minutes logged: 131.6 (2.19 h) over 42 jobs  `[src: logs/gpu_budget.csv minutes]`
 - smoke: 7.3 min (5 jobs)  `[src: logs/gpu_budget.csv]`
 - run_model: 46.9 min (9 jobs)  `[src: logs/gpu_budget.csv]`
 - rescore: 46.9 min (8 jobs)  `[src: logs/gpu_budget.csv]`
-- run_judge: 8.8 min (2 jobs)  `[src: logs/gpu_budget.csv]`
+- run_judge: 13.4 min (4 jobs)  `[src: logs/gpu_budget.csv]`
 
 ## Data health (per model)
 
@@ -99,7 +99,7 @@
 - olmo-3-7b: identity-flipped n=74, judge-A 0.0%, keyword 4.1%, mean words 62  `[src: results/rq3a_disclosure.csv]`
 - ministral-8b: identity-flipped n=37, judge-A 0.0%, keyword 0.0%, mean words 70  `[src: results/rq3a_disclosure.csv]`
 - sarvam-m: identity-flipped n=36, judge-A 0.0%, keyword 0.0%, mean words 52  `[src: results/rq3a_disclosure.csv]`
-- Judge outputs: 19615 explanations judged; A=1, B=15965, C=3649  `[src: results/raw/mistral-small-24b-judge/mentions.jsonl]`
+- Judge outputs: 30337 explanations judged; A=856, B=16034, C=13447  `[src: results/raw/mistral-small-24b-judge/mentions.jsonl]`
 
 ## RQ3b self-prediction (condition N = counterfactual name only; A = attribute stated)
 
@@ -149,6 +149,102 @@
 - region_northeast (dim region): abstention range 0-0%; free-answer accuracy range 100-100%; forced-choice range 100-100%  `[src: results/manip_accuracy.csv]`
 - Christian-coded names, forced answers: {'Hindu': 123, 'Muslim': 5}  `[src: results/manip_answers.csv]`
 - 'Not Indian' share for any cell, any model: max 0%  `[src: results/manip_accuracy.csv dim=indian]`
+
+## RQ1 excess over matched control: cells significant (Holm per model)
+
+- qwen3-14b region_northeast: excess +1.01 pp [+0.30, +1.99], Holm p=0.0200  `[src: results/rq1_excess.csv]`
+- qwen3-32b gender_female: excess +2.14 pp [+1.30, +3.12], Holm p=0.0008  `[src: results/rq1_excess.csv]`
+- qwen3-32b caste_obc: excess +0.98 pp [+0.34, +1.84], Holm p=0.0133  `[src: results/rq1_excess.csv]`
+- qwen3-32b caste_sc: excess +0.84 pp [+0.28, +1.62], Holm p=0.0133  `[src: results/rq1_excess.csv]`
+- qwen3-32b region_south: excess -1.65 pp [-3.31, -0.48], Holm p=0.0225  `[src: results/rq1_excess.csv]`
+- olmo-3-7b gender_female: excess +1.14 pp [+0.88, +1.44], Holm p=0.0008  `[src: results/rq1_excess.csv]`
+- ministral-8b gender_female: excess +1.45 pp [+0.99, +2.05], Holm p=0.0008  `[src: results/rq1_excess.csv]`
+- sarvam-m gender_female: excess +1.14 pp [+0.30, +2.04], Holm p=0.0498  `[src: results/rq1_excess.csv]`
+- sarvam-m religion_muslim: excess +0.84 pp [+0.35, +1.44], Holm p=0.0049  `[src: results/rq1_excess.csv]`
+- sarvam-m region_northeast: excess +1.31 pp [+0.61, +2.12], Holm p=0.0008  `[src: results/rq1_excess.csv]`
+- Overlap between raw-ΔP significant cells and excess significant cells: 7 of 10  `[src: results/rq1_decision_bias.csv + rq1_excess.csv]`
+
+## RQ1 flip direction with profile-clustered bootstrap (2,000 reps) and per-model sign test
+
+- gender_female: share to Yes 80.2% [70.7, 88.2]; difference vs pooled controls +28.9 pp [+17.5, +41.1]; models with more to-Yes than to-No flips 7, more to-No 1, sign-test p=0.070  `[src: results/rq1_direction_clustered.csv]`
+- religion_muslim: share to Yes 59.8% [48.0, 70.7]; difference vs pooled controls +8.5 pp [-1.7, +20.3]; models with more to-Yes than to-No flips 3, more to-No 4, sign-test p=1.000  `[src: results/rq1_direction_clustered.csv]`
+- religion_sikh: share to Yes 67.1% [56.1, 77.9]; difference vs pooled controls +15.8 pp [+5.7, +27.7]; models with more to-Yes than to-No flips 6, more to-No 2, sign-test p=0.289  `[src: results/rq1_direction_clustered.csv]`
+- religion_christian: share to Yes 50.0% [39.3, 60.7]; difference vs pooled controls -1.3 pp [-14.2, +12.5]; models with more to-Yes than to-No flips 4, more to-No 3, sign-test p=1.000  `[src: results/rq1_direction_clustered.csv]`
+- caste_obc: share to Yes 58.0% [43.8, 71.7]; difference vs pooled controls +6.7 pp [-5.7, +20.1]; models with more to-Yes than to-No flips 4, more to-No 1, sign-test p=0.375  `[src: results/rq1_direction_clustered.csv]`
+- caste_sc: share to Yes 54.9% [39.2, 68.1]; difference vs pooled controls +3.6 pp [-10.4, +16.6]; models with more to-Yes than to-No flips 4, more to-No 2, sign-test p=0.688  `[src: results/rq1_direction_clustered.csv]`
+- region_south: share to Yes 48.5% [37.6, 59.6]; difference vs pooled controls -2.8 pp [-14.5, +9.2]; models with more to-Yes than to-No flips 3, more to-No 4, sign-test p=1.000  `[src: results/rq1_direction_clustered.csv]`
+- region_northeast: share to Yes 70.6% [62.8, 78.2]; difference vs pooled controls +19.3 pp [+8.2, +31.3]; models with more to-Yes than to-No flips 7, more to-No 1, sign-test p=0.070  `[src: results/rq1_direction_clustered.csv]`
+- control_pooled: share to Yes 51.3% [38.3, 63.3]; difference vs pooled controls +0.0 pp [+0.0, +0.0]; models with more to-Yes than to-No flips 3, more to-No 4, sign-test p=1.000  `[src: results/rq1_direction_clustered.csv]`
+
+## Mean ΔP near the threshold (|P_ref-0.5|<0.3), pooled over models
+
+- caste_obc: +0.36 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- caste_sc: +0.29 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- control_fullname: +0.52 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- control_surname: -0.43 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- gender_female: +3.57 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- region_northeast: +2.44 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- region_south: -0.91 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- religion_christian: -0.15 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- religion_muslim: +0.65 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+- religion_sikh: +1.20 pp (n=757)  `[src: results/rq1_near_threshold_with_controls.csv]`
+
+## RQ3b self-prediction AUROC with profile-bootstrap 95% CI (condition N, identity pairs)
+
+- qwen3-4b all: AUROC 0.47 [0.40, 0.54], pairs 4800, flips 130  `[src: results/rq3b_auroc_ci.csv]`
+- qwen3-4b near: AUROC 0.59 [0.40, 0.77], pairs 72, flips 34  `[src: results/rq3b_auroc_ci.csv]`
+- qwen3-8b all: AUROC 0.34 [0.27, 0.42], pairs 4800, flips 129  `[src: results/rq3b_auroc_ci.csv]`
+- qwen3-8b near: AUROC 0.46 [0.27, 0.69], pairs 104, flips 58  `[src: results/rq3b_auroc_ci.csv]`
+- qwen3-14b all: AUROC 0.46 [0.33, 0.58], pairs 4800, flips 37  `[src: results/rq3b_auroc_ci.csv]`
+- qwen3-14b near: AUROC 0.43 [0.23, 0.64], pairs 80, flips 22  `[src: results/rq3b_auroc_ci.csv]`
+- qwen3-32b all: AUROC 0.65 [0.58, 0.72], pairs 4800, flips 95  `[src: results/rq3b_auroc_ci.csv]`
+- qwen3-32b near: AUROC 0.49 [0.40, 0.57], pairs 512, flips 83  `[src: results/rq3b_auroc_ci.csv]`
+- granite-3.3-8b all: AUROC 0.68 [0.62, 0.74], pairs 4772, flips 82  `[src: results/rq3b_auroc_ci.csv]`
+- granite-3.3-8b near: AUROC 0.56 [0.49, 0.64], pairs 439, flips 77  `[src: results/rq3b_auroc_ci.csv]`
+- olmo-3-7b all: AUROC 0.49 [0.40, 0.58], pairs 4800, flips 74  `[src: results/rq3b_auroc_ci.csv]`
+- olmo-3-7b near: AUROC 0.56 [0.44, 0.67], pairs 784, flips 74  `[src: results/rq3b_auroc_ci.csv]`
+- ministral-8b all: AUROC 0.58 [0.42, 0.75], pairs 4800, flips 44  `[src: results/rq3b_auroc_ci.csv]`
+- ministral-8b near: AUROC 0.54 [0.37, 0.74], pairs 944, flips 36  `[src: results/rq3b_auroc_ci.csv]`
+- sarvam-m all: AUROC 0.55 [0.45, 0.67], pairs 4800, flips 74  `[src: results/rq3b_auroc_ci.csv]`
+- sarvam-m near: AUROC 0.53 [0.40, 0.67], pairs 560, flips 73  `[src: results/rq3b_auroc_ci.csv]`
+
+## Manipulation check by language: caste abstention
+
+- en: 'Cannot tell' for caste 1408 of 1408 answers  `[src: results/manip_answers.csv]`
+- hi: 'Cannot tell' for caste 1231 of 1408 answers  `[src: results/manip_answers.csv]`
+
+## Explanation coverage of identity flips under the final P(Yes) readout
+
+- qwen3-4b: identity flips 130, with an explanation 130  `[src: results/explanations_with_labels.csv + final readout]`
+- qwen3-8b: identity flips 129, with an explanation 129  `[src: results/explanations_with_labels.csv + final readout]`
+- qwen3-14b: identity flips 37, with an explanation 37  `[src: results/explanations_with_labels.csv + final readout]`
+- qwen3-32b: identity flips 95, with an explanation 95  `[src: results/explanations_with_labels.csv + final readout]`
+- granite-3.3-8b: identity flips 82, with an explanation 38  `[src: results/explanations_with_labels.csv + final readout]`
+- olmo-3-7b: identity flips 74, with an explanation 74  `[src: results/explanations_with_labels.csv + final readout]`
+- ministral-8b: identity flips 44, with an explanation 37  `[src: results/explanations_with_labels.csv + final readout]`
+- sarvam-m: identity flips 74, with an explanation 36  `[src: results/explanations_with_labels.csv + final readout]`
+- All models: identity flips 665, explained 576 (explanation pairs were selected with the run-time first-token readout)  `[src: results/explanations_with_labels.csv]`
+
+## Positive control: identity stated explicitly, no name (English, T1, 150 profiles x 9 variants per model)
+
+- gender_female: mean ΔP range +0.71 to +4.75 pp; pooled flips to Yes 35, to No 1  `[src: results/explicit_decision.csv]`
+- religion_muslim: mean ΔP range -0.14 to +2.82 pp; pooled flips to Yes 18, to No 1  `[src: results/explicit_decision.csv]`
+- religion_sikh: mean ΔP range +0.15 to +4.10 pp; pooled flips to Yes 19, to No 2  `[src: results/explicit_decision.csv]`
+- religion_christian: mean ΔP range -0.85 to +0.84 pp; pooled flips to Yes 7, to No 4  `[src: results/explicit_decision.csv]`
+- caste_obc: mean ΔP range -0.24 to +7.77 pp; pooled flips to Yes 34, to No 0  `[src: results/explicit_decision.csv]`
+- caste_sc: mean ΔP range -0.12 to +9.72 pp; pooled flips to Yes 51, to No 0  `[src: results/explicit_decision.csv]`
+- region_south: mean ΔP range -1.21 to +0.69 pp; pooled flips to Yes 6, to No 4  `[src: results/explicit_decision.csv]`
+- region_northeast: mean ΔP range -0.54 to +4.32 pp; pooled flips to Yes 20, to No 0  `[src: results/explicit_decision.csv]`
+- gender_female: judge-A rate (all explicit explanations) range 0.0-38.0%, mean 5.6%  `[src: results/explicit_disclosure.csv]`
+- religion_muslim: judge-A rate (all explicit explanations) range 0.0-23.3%, mean 3.8%  `[src: results/explicit_disclosure.csv]`
+- religion_sikh: judge-A rate (all explicit explanations) range 0.0-27.3%, mean 3.7%  `[src: results/explicit_disclosure.csv]`
+- religion_christian: judge-A rate (all explicit explanations) range 0.0-23.3%, mean 3.0%  `[src: results/explicit_disclosure.csv]`
+- caste_obc: judge-A rate (all explicit explanations) range 0.7-32.7%, mean 15.3%  `[src: results/explicit_disclosure.csv]`
+- caste_sc: judge-A rate (all explicit explanations) range 2.0-44.0%, mean 26.3%  `[src: results/explicit_disclosure.csv]`
+- region_south: judge-A rate (all explicit explanations) range 0.0-25.3%, mean 3.7%  `[src: results/explicit_disclosure.csv]`
+- region_northeast: judge-A rate (all explicit explanations) range 0.0-28.7%, mean 6.6%  `[src: results/explicit_disclosure.csv]`
+- reference: judge-A rate (all explicit explanations) range 0.0-26.7%, mean 3.6%  `[src: results/explicit_disclosure.csv]`
+- Explicit flipped explanations: n=202, judge-A count 24  `[src: results/explicit_disclosure.csv]`
 
 ## Name validation (Outkast SECC-2011, Naampy electoral rolls)
 

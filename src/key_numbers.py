@@ -154,6 +154,69 @@ ind = pd.read_csv(R / "manip_accuracy.csv")
 ind = ind[ind.dim == "indian"]
 line(f"'Not Indian' share for any cell, any model: max {100 * ind.share_not_indian.max():.0f}%", "results/manip_accuracy.csv dim=indian")
 
+
+# ---- added after fact-check + draft review ----
+h("RQ1 excess over matched control: cells significant (Holm per model)")
+for _, r in e[e.p_holm_model < .05].iterrows():
+    line(f"{r.model} {r.attribute}: excess {pp(r.excess)} [{100 * r.lo:+.2f}, {100 * r.hi:+.2f}], Holm p={r.p_holm_model:.4f}",
+         "results/rq1_excess.csv")
+sig_raw = set(zip(a[a.sig_holm == True].model, a[a.sig_holm == True].attribute))  # noqa: E712
+sig_ex = set(zip(e[e.p_holm_model < .05].model, e[e.p_holm_model < .05].attribute))
+line(f"Overlap between raw-ΔP significant cells and excess significant cells: {len(sig_raw & sig_ex)} of {len(sig_raw)}",
+     "results/rq1_decision_bias.csv + rq1_excess.csv")
+cd = pd.read_csv(R / "rq1_direction_clustered.csv")
+h("RQ1 flip direction with profile-clustered bootstrap (2,000 reps) and per-model sign test")
+for _, r in cd.iterrows():
+    line(f"{r.attribute}: share to Yes {100 * r.share_to_yes:.1f}% [{100 * r.ci_lo:.1f}, {100 * r.ci_hi:.1f}]; "
+         f"difference vs pooled controls {100 * r.diff_vs_control:+.1f} pp [{100 * r.diff_lo:+.1f}, {100 * r.diff_hi:+.1f}]; "
+         f"models with more to-Yes than to-No flips {r.models_more_to_yes}, more to-No {r.models_more_to_no}, sign-test p={r.model_sign_test_p:.3f}",
+         "results/rq1_direction_clustered.csv")
+nt = pd.read_csv(R / "rq1_near_threshold_with_controls.csv")
+h("Mean ΔP near the threshold (|P_ref-0.5|<0.3), pooled over models")
+for _, r in nt.iterrows():
+    line(f"{r.variant}: {pp(r.dp_near)} (n={r.n})", "results/rq1_near_threshold_with_controls.csv")
+ac = pd.read_csv(R / "rq3b_auroc_ci.csv")
+h("RQ3b self-prediction AUROC with profile-bootstrap 95% CI (condition N, identity pairs)")
+for _, r in ac.iterrows():
+    line(f"{r.model} {r.band}: AUROC {r.auroc:.2f} [{r.ci_lo:.2f}, {r.ci_hi:.2f}], pairs {r.n_pairs}, flips {r.n_flips}",
+         "results/rq3b_auroc_ci.csv")
+h("Manipulation check by language: caste abstention")
+for lang in ["en", "hi"]:
+    s = ma[(ma.dim == "caste") & (ma.lang == lang)]
+    line(f"{lang}: 'Cannot tell' for caste {int((s.answer == 'Cannot tell').sum())} of {len(s)} answers",
+         "results/manip_answers.csv")
+h("Explanation coverage of identity flips under the final P(Yes) readout")
+ewl = pd.read_csv(R / "explanations_with_labels.csv")
+r1all = []
+from src.analysis import bench, p_yes_table, pairs  # noqa: E402
+Bn = bench()
+tot_f, cov_f = 0, 0
+for m in MODELS:
+    v_ = pairs(p_yes_table(m, Bn))
+    f_ = v_[v_.variant.isin(ATTR) & v_.flip]
+    have = set(ewl[ewl.model == m].id)
+    n_cov = int(f_.id.isin(have).sum())
+    tot_f += len(f_)
+    cov_f += n_cov
+    line(f"{m}: identity flips {len(f_)}, with an explanation {n_cov}", "results/explanations_with_labels.csv + final readout")
+line(f"All models: identity flips {tot_f}, explained {cov_f} (explanation pairs were selected with the run-time first-token readout)",
+     "results/explanations_with_labels.csv")
+xp = R / "explicit_decision.csv"
+if xp.exists():
+    xd, xx = pd.read_csv(xp), pd.read_csv(R / "explicit_disclosure.csv")
+    h("Positive control: identity stated explicitly, no name (English, T1, 150 profiles x 9 variants per model)")
+    for att in ATTR:
+        s = xd[xd.attribute == att]
+        line(f"{att}: mean ΔP range {100 * s.mean_dp.min():+.2f} to {100 * s.mean_dp.max():+.2f} pp; pooled flips to Yes {int(s.to_yes.sum())}, to No {int(s.to_no.sum())}",
+             "results/explicit_decision.csv")
+    for att in ATTR + ["reference"]:
+        s = xx[(xx.attribute == att) & (xx.set == "all")]
+        line(f"{att}: judge-A rate (all explicit explanations) range {100 * s.judge_A_rate.min():.1f}-{100 * s.judge_A_rate.max():.1f}%, "
+             f"mean {100 * s.judge_A_rate.mean():.1f}%", "results/explicit_disclosure.csv")
+    f2 = xx[xx.set == "flipped"]
+    line(f"Explicit flipped explanations: n={int(f2.n.sum())}, judge-A count {int((f2.judge_A_rate * f2.n_judged).sum())}",
+         "results/explicit_disclosure.csv")
+
 nv = pd.read_csv(ROOT / "design" / "name_validation_v1.csv")
 h("Name validation (Outkast SECC-2011, Naampy electoral rolls)")
 line(f"Names flagged by automated checks: {int(nv.auto_check.str.contains('below|ambiguous').sum())} of {len(nv)}", "design/name_validation_v1.csv")

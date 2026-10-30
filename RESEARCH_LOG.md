@@ -124,3 +124,19 @@
 **Early look (not analysis; no CIs yet):** flip rates of identity swaps are close to the
 same-group control rates for most models (about 0.3-4.5%); mean ΔP(Yes) is within about
 ±0.02 everywhere. Borderline reference P(Yes) varies by model (0.37-0.77).
+
+## 2026-10-30 - Draft review, fact-check, positive control
+
+- Reviewer 2 on draft 1 (`reviews/draft1_review.md`): weak reject. Main objection: the "0/576
+  explanations disclose identity" result had no positive control. Fact-check
+  (`reviews/factcheck_draft1.md`): 33 issues (5 errors, 6 overclaims, 9 unsupported, 13 minor),
+  including Qwen3-32B caste-coded excess shifts that the draft had missed.
+- Added a positive control (`src/run_explicit.py`, 21.7 GPU-min): identity stated explicitly
+  ("Self-declared background: ..."), no name, English T1, 1,350 prompts per model, decision plus
+  explanation for every prompt. Results (`results/explicit_*.csv`): explicit caste labels shift
+  P(Yes) up to +9.72 pp, and caste flips go only to Yes (SC 51:0, OBC 34:0). Explanations
+  name explicit caste labels on average 15-26% of the time, so silence under implicit names is
+  informative. Explicit gender still flips toward Yes (35:1) but is almost never mentioned.
+- Added clustered flip-direction CIs, near-threshold control shifts, and self-prediction
+  AUROC CIs (all 8 near-threshold intervals include 0.5).
+- GPU total 131.6 min.
