@@ -1,0 +1,11 @@
+model,attribute,mean_dp,same_sign_when_dropping_each_name,of
+qwen3-4b,religion_sikh,0.0195458479152336,8,8
+qwen3-32b,gender_female,0.0170233763277808,8,8
+qwen3-32b,region_south,-0.0159768139263926,8,8
+olmo-3-7b,gender_female,0.0111296996011319,8,8
+olmo-3-7b,religion_christian,-0.0072303723064365,8,8
+ministral-8b,gender_female,0.0151123402314924,8,8
+sarvam-m,gender_female,0.0121676326278089,8,8
+sarvam-m,religion_muslim,0.0133150937046043,8,8
+sarvam-m,religion_sikh,0.0100745343744448,8,8
+sarvam-m,region_northeast,0.0180160144250695,8,8
