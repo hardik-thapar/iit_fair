@@ -1,5 +1,13 @@
 # Before submission: what the human authors must do
 
+**Submission files:** `submission/` (also zipped as `submission.zip`, ready to upload to
+Overleaf): `main.tex` (IEEEtran conference, 10 pages), `refs.bib`, `figures/`, `main.pdf`.
+Rebuild with `scripts/package_submission.sh` after any edit to `paper/main.tex`.
+The current text is the humanised version, checked against the verified pre-humanise
+version (`paper/main_prehumanise.tex`); see `reviews/verify_humanised.md`.
+
+Placeholders still in the PDF (11): 4 author names, 4 affiliations, kappa (2 places), release URL.
+
 ## Must do (the paper is not honest or complete without these)
 - [ ] **Validate the name lists.** Check every name in `design/name_pools_v1_used_in_run.csv`
       against `design/name_validation_v1.csv` (Outkast/Naampy results: 15 of 88 flagged).
@@ -19,7 +27,8 @@
 - [ ] **Re-check every citation** you keep. Open the paper and make sure our sentence matches
       what it says. `zaveri2025caste` is only partly verified (its PDF was blocked); re-open it
       before quoting its numbers.
-- [ ] **Rewrite the paper in your own voice**, especially the Introduction, Discussion and
+- [ ] **Read the whole paper once yourselves** and adjust anything that does not sound like you
+- [ ] **Rewrite further in your own voice if needed**, especially the Introduction, Discussion and
       Conclusion. Check the venue's policy on AI-assisted writing and disclose as it requires.
 - [ ] Fill in the authors, affiliations, acknowledgements and release URL.
 - [ ] **Ethics:** decide the release terms (gated access plus a usage statement are proposed),
