@@ -4,7 +4,7 @@
 - [x] Repo structure, git, README
 - [x] SSH to GPU server works (root@134.199.194.213, MI300X, ROCm)
 - [ ] vLLM ROCm docker image pulled on server (in progress)
-- [ ] Hugging Face token on server for gated models (needs humans)
+- [~] HF token on server (valid; gated repos still 403 - licences or token scope)
 
 ## Phase 1 - Literature review
 - [ ] Search 6 areas, 25-40 papers, notes in `lit/notes.md`

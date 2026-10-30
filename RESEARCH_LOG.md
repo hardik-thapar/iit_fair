@@ -21,3 +21,11 @@
 
 **Next**
 - Phase 1 literature review.
+
+## 2026-10-30 - Hugging Face access
+
+- Team provided an HF token; stored on the server only at `/root/fairaudit/.env`
+  (mode 600, never committed). Token is valid (fine-grained).
+- Gated repos (Llama 3.x, Gemma 2/3) return 403: either licences not yet accepted on
+  the account, or the fine-grained token lacks "read access to public gated repos".
+  Open repos (Qwen) work. Waiting on the team to fix before model selection in Phase 3.
