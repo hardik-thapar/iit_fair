@@ -12,6 +12,6 @@
  "n_profiles": 150,
  "bootstrap_B": 10000,
  "seed": 20261030,
- "n_sig_holm": 27,
+ "n_sig_holm": 26,
  "n_tests": 64
 }

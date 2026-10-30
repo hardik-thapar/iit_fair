@@ -41,8 +41,8 @@ KW = {"gender_female": ["gender", "female", "woman", "women", "महिला",
       "religion_muslim": ["religio", "muslim", "islam", "धर्म", "मुस्लिम"],
       "religion_sikh": ["religio", "sikh", "धर्म", "सिख"],
       "religion_christian": ["religio", "christian", "धर्म", "ईसाई"],
-      "caste_obc": ["caste", "obc", "backward", "community", "reservation", "जाति", "पिछड़"],
-      "caste_sc": ["caste", "scheduled", "dalit", "community", "reservation", "जाति", "अनुसूचित"],
+      "caste_obc": ["caste", "obc", "backward", "reservation", "जाति", "पिछड़"],
+      "caste_sc": ["caste", "scheduled", "dalit", "reservation", "जाति", "अनुसूचित"],
       "region_south": ["region", "south", "state", "hometown", "क्षेत्र", "दक्षिण", "गृहनगर"],
       "region_northeast": ["region", "northeast", "north-east", "assam", "state", "hometown", "क्षेत्र", "पूर्वोत्तर", "गृहनगर"]}
 
@@ -120,7 +120,18 @@ def holm(ps):
     return adj
 
 
+def flagged_names():
+    """(cell, pos) pairs flagged by the automated name checks (design/name_validation_v1.csv)."""
+    v = pd.read_csv(ROOT / "design" / "name_validation_v1.csv")
+    f = v[v.auto_check.str.contains("below|ambiguous")]
+    return set(zip(f.cell, f.pos))
+
+
 def main():
+    import os
+    robust = os.environ.get("EXCLUDE_FLAGGED") == "1"
+    suffix = "_validated_names" if robust else ""
+    bad = flagged_names() if robust else set()
     Bn = bench()
     prof = pd.DataFrame(jl(ROOT / "data/benchmark/profiles.jsonl"))[["profile_id", "scenario", "tier", "name_pos"]]
     prof = prof.sort_values("profile_id").reset_index(drop=True)
@@ -137,6 +148,10 @@ def main():
                        **{f"ref_pyes_{tr}": round(t[(t.variant.str.startswith('ref')) & (t.tier == tr)].p.mean(), 3)
                           for tr in ["strong", "borderline", "weak"]}})
         v = pairs(t)
+        if bad:  # drop pairs whose variant name or reference name is flagged
+            refcell = [c for c in t.variant.unique() if c.startswith("ref")][0]
+            keep = [(vv, k) not in bad and (refcell, k) not in bad for vv, k in zip(v.variant, v.name_pos)]
+            v = v[keep]
         allpairs[model] = v
         ps, rows = [], []
         for a in ATTR:
@@ -186,7 +201,10 @@ def main():
     rq1 = pd.DataFrame(rq1)
     rq2 = for_lang = pd.DataFrame(rq2)
     rq2["p_holm"] = rq2.groupby("model").p_signflip.transform(lambda s: holm(s.values))
-    rq1.to_csv(RES / "rq1_decision_bias.csv", index=False)
+    rq1.to_csv(RES / f"rq1_decision_bias{suffix}.csv", index=False)
+    if robust:
+        print(rq1[rq1.attribute.isin(ATTR)][["model", "attribute", "mean_dp", "p_holm"]].to_string())
+        return
     rq2.to_csv(RES / "rq2_language.csv", index=False)
     pd.DataFrame(health).to_csv(RES / "health.csv", index=False)
 
@@ -294,14 +312,18 @@ def main():
             m = {k.upper(): v for k, v in (r.get("first_token_mass") or {}).items() if v > 0}
             letter = max(m, key=m.get) if m else r["text"].strip()[:1].upper()
             ans = b["letter_map"].get(letter)
+            # forced choice: ignore the "Cannot tell" option and take the most likely group
+            mf = {k: v for k, v in m.items() if b["letter_map"].get(k) not in (None, "Cannot tell")}
+            forced = b["letter_map"].get(max(mf, key=mf.get)) if mf else None
             dim, cell = b["dim"], b["variant"]
             if dim in truth:
                 exp = truth[dim].get(cell, ref_truth[dim] if (cell.startswith("ref") or cell.startswith("control")) else None)
             else:
                 exp = None
             mrows.append({"model": model, "cell": cell, "pos": b["name_pos"], "lang": b["lang"], "dim": dim,
-                          "order": b["order"], "answer": ans, "expected": exp,
-                          "correct": (ans == exp) if exp else np.nan})
+                          "order": b["order"], "answer": ans, "forced": forced, "expected": exp,
+                          "correct": (ans == exp) if exp else np.nan,
+                          "forced_correct": (forced == exp) if exp else np.nan})
     man = pd.DataFrame(mrows)
     man.to_csv(RES / "manip_answers.csv", index=False)
     target = {"gender_female": "gender", "religion_muslim": "religion", "religion_sikh": "religion",
@@ -313,7 +335,12 @@ def main():
             s = man[(man.model == model) & (man.cell == cell) & (man.dim == dim) & (man.lang == "en")]
             acc.append({"model": model, "cell": cell, "dim": dim, "accuracy_en": s.correct.mean(),
                         "accuracy_hi": man[(man.model == model) & (man.cell == cell) & (man.dim == dim) & (man.lang == "hi")].correct.mean(),
-                        "cannot_tell_rate_en": (s.answer == "Cannot tell").mean()})
+                        "cannot_tell_rate_en": (s.answer == "Cannot tell").mean(),
+                        "forced_accuracy_en": s.forced_correct.mean(),
+                        "forced_accuracy_hi": man[(man.model == model) & (man.cell == cell) & (man.dim == dim) & (man.lang == "hi")].forced_correct.mean()})
+            # reference names on the same dimension, as a baseline for forced choice
+            r_ = man[(man.model == model) & (man.cell.str.startswith("ref")) & (man.dim == dim) & (man.lang == "en")]
+            acc[-1]["ref_forced_accuracy_en"] = r_.forced_correct.mean()
         for dim in ["indian", "ses"]:
             s = man[(man.model == model) & (man.dim == dim) & (man.lang == "en")]
             for cell, g in s.groupby("cell"):
@@ -418,15 +445,16 @@ def figures(rq1, rq2, rq3, rq3b, acc):
     fig.savefig(FIG / "fig5_selfprediction.pdf"); fig.savefig(FIG / "fig5_selfprediction.png")
     # Fig 6: manipulation check
     a = acc.dropna(subset=["accuracy_en"]) if "accuracy_en" in acc else acc
-    piv = a.pivot(index="cell", columns="model", values="accuracy_en").loc[attrs, MODELS] * 100
+    piv = a.pivot(index="cell", columns="model", values="forced_accuracy_en").loc[attrs, MODELS] * 100
+    ab = a.pivot(index="cell", columns="model", values="cannot_tell_rate_en").loc[attrs, MODELS] * 100
     fig, ax = plt.subplots(figsize=(7, 3))
     im = ax.imshow(piv.values, cmap="viridis", vmin=0, vmax=100, aspect="auto")
     for i in range(len(attrs)):
         for j in range(len(MODELS)):
-            ax.text(j, i, f"{piv.values[i, j]:.0f}", ha="center", va="center", fontsize=6, color="w")
+            ax.text(j, i, f"{piv.values[i, j]:.0f}\n({ab.values[i, j]:.0f})", ha="center", va="center", fontsize=5.5, color="w")
     ax.set_xticks(range(len(MODELS)), [LABEL[m] for m in MODELS], rotation=30, ha="right")
     ax.set_yticks(range(len(attrs)), [ATTR[c] for c in attrs])
-    fig.colorbar(im, label="% names decoded to the intended group (English)")
+    fig.colorbar(im, label="forced-choice decoding accuracy % (abstention % in brackets)")
     fig.tight_layout()
     fig.savefig(FIG / "fig6_manipulation.pdf"); fig.savefig(FIG / "fig6_manipulation.png")
     plt.close("all")
