@@ -123,3 +123,71 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def reviewer_draft1():
+    """Extra checks from reviews/draft1_review.md (no GPU)."""
+    Bn = bench()
+    allp = {m: pairs(p_yes_table(m, Bn)) for m in MODELS}
+    P = pd.concat([v.assign(model=m) for m, v in allp.items()])
+    P["to_yes"] = (P.p_ref < .5) & (P.p >= .5)
+    P["to_no"] = (P.p_ref >= .5) & (P.p < .5)
+    profs = np.array(sorted(P.profile_id.unique()))
+    rng = np.random.default_rng(SEED)
+    idx = [rng.integers(0, len(profs), len(profs)) for _ in range(2000)]
+    ctrl = P[P.variant.str.startswith("control")]
+    rows = []
+    for a in list(ATTR) + ["control_pooled"]:
+        s = ctrl if a == "control_pooled" else P[P.variant == a]
+        g = s.groupby("profile_id")[["to_yes", "to_no"]].sum().reindex(profs, fill_value=0)
+        c = ctrl.groupby("profile_id")[["to_yes", "to_no"]].sum().reindex(profs, fill_value=0)
+        share = g.to_yes.sum() / max(g.to_yes.sum() + g.to_no.sum(), 1)
+        cshare = c.to_yes.sum() / max(c.to_yes.sum() + c.to_no.sum(), 1)
+        bs, bd = [], []
+        for ix in idx:  # cluster bootstrap over profiles (all models' flips for a profile move together)
+            y, n = g.to_yes.values[ix].sum(), g.to_no.values[ix].sum()
+            cy, cn = c.to_yes.values[ix].sum(), c.to_no.values[ix].sum()
+            sh = y / max(y + n, 1)
+            bs.append(sh)
+            bd.append(sh - cy / max(cy + cn, 1))
+        per_model = s.groupby("model")[["to_yes", "to_no"]].sum()
+        nm_more_yes = int((per_model.to_yes > per_model.to_no).sum())
+        nm_more_no = int((per_model.to_yes < per_model.to_no).sum())
+        sign_p = binomtest(nm_more_yes, nm_more_yes + nm_more_no, 0.5).pvalue if nm_more_yes + nm_more_no else np.nan
+        rows.append({"attribute": a, "share_to_yes": share, "ci_lo": np.percentile(bs, 2.5), "ci_hi": np.percentile(bs, 97.5),
+                     "diff_vs_control": share - cshare, "diff_lo": np.percentile(bd, 2.5), "diff_hi": np.percentile(bd, 97.5),
+                     "models_more_to_yes": nm_more_yes, "models_more_to_no": nm_more_no, "model_sign_test_p": sign_p})
+    d = pd.DataFrame(rows)
+    d.to_csv(RES / "rq1_direction_clustered.csv", index=False)
+    print(d.round(3).to_string())
+    # near-threshold dP including controls
+    near = P[(P.p_ref - .5).abs() < .3]
+    nt = near.groupby("variant").agg(dp_near=("dp", "mean"), n=("dp", "size")).reset_index()
+    nt.to_csv(RES / "rq1_near_threshold_with_controls.csv", index=False)
+    print(nt.round(4).to_string())
+    # AUROC CIs (profile bootstrap) for self-prediction, condition N, identity pairs
+    rows = []
+    for m, v in allp.items():
+        sp = {}
+        for r in jl(ROOT / "results/raw" / m / "selfpred.jsonl"):
+            mm = r.get("first_token_mass") or {}
+            tot = mm.get("yes", 0) + mm.get("no", 0)
+            if tot >= 0.5:
+                sp[r["id"]] = mm["yes"] / tot
+        vv = v[v.variant.isin(ATTR)].copy()
+        vv["psp"] = vv.id.map(lambda i: sp.get(f"{i}|N", np.nan))
+        vv = vv.dropna(subset=["psp"])
+        for band, sub in [("all", vv), ("near", vv[(vv.p_ref - .5).abs() < .2])]:
+            pid = sub.profile_id.values
+            up = np.unique(pid)
+            groups = {u: np.where(pid == u)[0] for u in up}
+            bs = []
+            for _ in range(1000):
+                ix = np.concatenate([groups[u] for u in rng.choice(up, len(up))])
+                bs.append(auroc(sub.psp.values[ix], sub.flip.values[ix]))
+            rows.append({"model": m, "band": band, "n_pairs": len(sub), "n_flips": int(sub.flip.sum()),
+                         "auroc": auroc(sub.psp.values, sub.flip.values),
+                         "ci_lo": np.nanpercentile(bs, 2.5), "ci_hi": np.nanpercentile(bs, 97.5)})
+    a = pd.DataFrame(rows)
+    a.to_csv(RES / "rq3b_auroc_ci.csv", index=False)
+    print(a.round(3).to_string())
