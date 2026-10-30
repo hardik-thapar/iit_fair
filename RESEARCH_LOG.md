@@ -81,3 +81,46 @@
 
 **Next**
 - Reviewer 2 on Phase 1; Methodologist drafts `design/spec.md` (running in parallel).
+
+## 2026-10-30 - Phase 2 spec, reviews, and the first full GPU run
+
+**Spec and reviews**
+- Methodologist wrote `design/spec.md`, `design/name_pools.csv` (11 cells x 8 names),
+  `design/templates_en.md`. Reviewer 2 reviewed it (`reviews/phase2_spec_review.md`, 8 major
+  issues). Lead decisions on all 8 were sent back; the v2 rewrite was interrupted by a usage
+  limit and is NOT finished. The run below uses spec v1 plus these v2 changes that were
+  already decided: reason-first explanations, manipulation check with "Indian?" and SES items,
+  self-prediction conditions N and A.
+- Lit Reviewer added 9 references from the phase 1 review (65 verified entries now) and
+  corrected christian2026self, banerjee2009labor, siegel2024probabilities, arcuschin2026biases.
+
+**Human checkpoints (a) and (b) were waived by the team** (instruction in chat, 2026-10-30:
+"set up tasks for gpu ... so that work starts on the gpu" while the team was away). So:
+- Name lists are the Methodologist's unvalidated v1 draft (32 rows flagged
+  `[NEEDS HUMAN CHECK]`; Outkast/Naampy/Pranaam not yet run).
+- Hindi templates were machine-translated by the lead (`configs/templates.json`), unvalidated.
+- Names and hometowns stay in Latin script inside Hindi prompts (no transliteration yet).
+- Because every output is cached by prompt hash, correcting a name or a translation later only
+  re-runs the affected prompts.
+
+**Models** (official repos only; exact revisions in `configs/models.json`)
+- Qwen3 4B/8B/14B/32B (RQ4 family; thinking disabled), Granite 3.3 8B, OLMo 3 7B,
+  Ministral 8B (2410), Sarvam-M 24B (Indic). Judge: Mistral-Small-24B-Instruct-2501.
+- Ministral-3-8B-2512 and Mistral-Small-3.2 failed to load: this vLLM image's transformers lacks
+  `PixtralRotaryEmbedding`. Replaced with Mistral's text-only official models.
+
+**Run 1** (`configs/queue_full.txt`, 60.4 GPU-min incl. smoke tests and pilot, all exit 0)
+- 6,600 decision prompts, 2,112 manipulation prompts, 12,000 self-prediction prompts and
+  ~2,100 explanations per model; judge over all explanations.
+- Health check (`src/pilot_check.py`): English decisions clean (Yes+No mass >= 0.9 on all,
+  argmax vs generated text 98.7-100%). Problems, all in Hindi prompts: Granite (50% of
+  decisions) and Sarvam-M (36%) put mass on "हाँ" split into byte pieces, so first-token mass
+  misses it; Hindi explanations hit the 256-token cap (Qwen3-8B 637, Qwen3-32B 560, Granite 977).
+- Fix (run 2, `src/rescore.py`): score full answer strings Yes/No/हाँ/हां/नहीं (with and
+  without a leading space) via prompt logprobs for all decision and self-prediction prompts in
+  both languages (spec §6.3 fallback, now the primary readout for consistency), and regenerate
+  truncated explanations with max_tokens=768. Then judge the new explanations.
+
+**Early look (not analysis; no CIs yet):** flip rates of identity swaps are close to the
+same-group control rates for most models (about 0.3-4.5%); mean ΔP(Yes) is within about
+±0.02 everywhere. Borderline reference P(Yes) varies by model (0.37-0.77).

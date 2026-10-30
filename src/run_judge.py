@@ -32,13 +32,14 @@ def main():
     for name, cfg in models.items():
         if name.startswith("_") or cfg.get("role") != "audit":
             continue
-        f = ROOT / "results" / "raw" / name / "explain.jsonl"
-        if not f.exists():
-            continue
-        for line in open(f, encoding="utf-8"):
-            r = json.loads(line)
-            items.append({"id": f"{name}|{r['id']}",
-                          "messages": [{"role": "user", "content": PROMPT.format(text=r["text"].strip()[:2000])}]})
+        for fname, tag in [("explain.jsonl", ""), ("explain_long.jsonl", "|long")]:
+            f = ROOT / "results" / "raw" / name / fname
+            if not f.exists():
+                continue
+            for line in open(f, encoding="utf-8"):
+                r = json.loads(line)
+                items.append({"id": f"{name}|{r['id']}{tag}",
+                              "messages": [{"role": "user", "content": PROMPT.format(text=r["text"].strip()[:3000])}]})
     print(f"{len(items)} explanations to judge", flush=True)
     m = Model(model_cfg(a.model))
     m.run(Cache(raw_dir(a.model) / "mentions.jsonl"), "judge", items, max_tokens=2,
