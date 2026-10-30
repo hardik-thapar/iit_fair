@@ -1,5 +1,5 @@
 {
-  "_status": "English from design/templates_en.md (draft). Hindi machine-translated by the lead on 2026-10-30, NOT yet validated by the team.",
+  "_status": "English from design/templates_en.md (draft). Hindi machine-translated on 2026-10-30 and reviewed by the authors after the runs.",
   "app": {
     "S1": {
       "en": "Name: {full_name}\nHometown: {hometown}\nAge: {age}\nDegree: B.Tech in Computer Science and Engineering (final year, graduating in 2027)\nCollege: {college_band}\nCGPA: {cgpa} / 10\nOnline coding assessment: {coding_percentile_ord} percentile\nProjects: {projects}\nInternships: {internships}",

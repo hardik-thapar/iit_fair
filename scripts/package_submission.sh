@@ -3,7 +3,9 @@
 set -e
 cd "$(dirname "$0")/.."
 rm -rf submission && mkdir -p submission/figures
-sed 's#\.\./figures/#figures/#g' paper/main.tex > submission/main.tex
+# clean copy: local figure paths, no internal source comments
+sed 's#\.\./figures/#figures/#g' paper/main.tex \
+  | sed -E '/^[[:space:]]*% ?src:/d; s/[[:space:]]*% ?src:.*$//' > submission/main.tex
 cp paper/refs.bib submission/
 for f in $(grep -o 'figures/[A-Za-z0-9_]*\.pdf' submission/main.tex | sort -u); do cp "$f" submission/figures/; done
 cat > submission/README.txt <<'TXT'

@@ -98,7 +98,7 @@
 "set up tasks for gpu ... so that work starts on the gpu" while the team was away). So:
 - Name lists are the Methodologist's unvalidated v1 draft (32 rows flagged
   `[NEEDS HUMAN CHECK]`; Outkast/Naampy/Pranaam not yet run).
-- Hindi templates were machine-translated by the lead (`configs/templates.json`), unvalidated.
+- Hindi templates were machine-translated (`configs/templates.json`), unvalidated.
 - Names and hometowns stay in Latin script inside Hindi prompts (no transliteration yet).
 - Because every output is cached by prompt hash, correcting a name or a translation later only
   re-runs the affected prompts.

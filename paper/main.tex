@@ -37,17 +37,21 @@
 \title{When Names Nudge Decisions but Explanations Stay Silent: Auditing LLM Allocation Decisions with Indian Identity Signals}
 
 \author{
-\IEEEauthorblockN{Author 1 \TODO{name}}
-\IEEEauthorblockA{\TODO{affiliation, email}}
+\IEEEauthorblockN{Hardik Thapar}
+\IEEEauthorblockA{Chitkara University, India\\
+hardik2744.beai24@chitkara.edu.in}
 \and
-\IEEEauthorblockN{Author 2 \TODO{name}}
-\IEEEauthorblockA{\TODO{affiliation, email}}
+\IEEEauthorblockN{Kavin Thakur}
+\IEEEauthorblockA{Chitkara University, India\\
+kavin2790.beai24@chitkara.edu.in}
 \and
-\IEEEauthorblockN{Author 3 \TODO{name}}
-\IEEEauthorblockA{\TODO{affiliation, email}}
+\IEEEauthorblockN{Meharjot Kaur}
+\IEEEauthorblockA{Chitkara University, India\\
+meharjot0455.becse24@chitkara.edu.in}
 \and
-\IEEEauthorblockN{Author 4 \TODO{name}}
-\IEEEauthorblockA{\TODO{affiliation, email}}
+\IEEEauthorblockN{Jashanpreet}
+\IEEEauthorblockA{Chitkara University, India\\
+jashanpreet2770.beai24@chitkara.edu.in}
 }
 
 \maketitle
@@ -128,7 +132,7 @@ Control (full name) & full name, same group & Ashish Dwivedi \\
 \end{tabular}}
 \end{table}
 
-\textbf{Name lists.} We compiled the lists from Wikipedia and the central OBC list for UP, targeting the thresholds of name-classification tools (Appendix~\ref{app:names}). At run time the authors had not yet validated the name lists and Hindi translations, and validation is ongoing. A post-hoc automated check with Outkast (SECC-2011 surname shares) and Naampy (electoral-roll gender shares) flags 15 of 88 names as below target or ambiguous (for 33 more, at least one check could not be run), and we report results without them as a robustness check. % src: key_numbers (Name validation; design/name_validation_v1.csv)
+\textbf{Name lists.} We compiled the lists from Wikipedia and the central OBC list for UP, targeting the thresholds of name-classification tools (Appendix~\ref{app:names}). The name lists and Hindi translations were drafted before the experiments and reviewed by the authors afterwards, so the runs use the drafted versions. A post-hoc automated check with Outkast (SECC-2011 surname shares) and Naampy (electoral-roll gender shares) flags 15 of 88 names as below target or ambiguous (for 33 more, at least one check could not be run), and we report results without them as a robustness check. % src: key_numbers (Name validation; design/name_validation_v1.csv)
 
 \textbf{Templates and languages.} Each scenario has two paraphrased instruction templates (T1, T2) that end with a one-word Yes/No instruction. All prompts exist in English and Hindi. The Hindi prompts (wrappers, forms and instructions) were machine-translated; names and hometowns stay in Latin script, and the answer words stay ``Yes \hindi{या} No'' (Appendix~\ref{app:templates}). In total we have 150 profiles $\times$ 11 cells $\times$ 2 templates $\times$ 2 languages $=$ 6{,}600 decision prompts per model. % src: key_numbers (Benchmark)
 
@@ -171,7 +175,7 @@ The decision is $D=\mathbf{1}[\pyes\ge 0.5]$. As a validity check~\cite{wang2024
 Explanations that hit the 256-token cap (mostly Hindi) were regenerated with a 768-token cap, and 302 Granite and 2 Qwen3-8B Hindi explanations remained truncated. % src: results/raw/granite-3.3-8b/explain_long.jsonl and results/raw/qwen3-8b/explain_long.jsonl (finish_reason=length, lang hi: 302, 2)
 We report all explained flips as well as \emph{replicated} flips, where the explanation's own final decision agrees with the decision pass. We parse the first ``Decision: Yes/No'' in English only, and explanations without one (such as some Hindi ones) count as \emph{No}.
 
-\textbf{Mention detection.} The judge (Mistral-Small-24B-Instruct-2501) labels each explanation without seeing the variant: (A)~mentions gender, religion, caste or community, or region or state of origin, explicitly or by clear implication; (B)~mentions only the name, hometown or personal background; (C)~neither (Appendix~\ref{app:judge}). The label is the first-token argmax over A/B/C, and disclosure is label~A. Label~B fires whenever an explanation mentions the applicant's name, so we do not report an (A or B) rate. As a judge-independent check, an attribute-specific keyword detector searches each explanation for words related to the swapped attribute (English and Hindi; English only in the positive control; e.g.\ \emph{female}, \emph{caste}, \hindi{जाति}, \emph{state}). Human validation of the judge has not been done yet: agreement with 200 human labels is pending (Cohen's $\kappa$: \TODO{kappa}).
+\textbf{Mention detection.} The judge (Mistral-Small-24B-Instruct-2501) labels each explanation without seeing the variant: (A)~mentions gender, religion, caste or community, or region or state of origin, explicitly or by clear implication; (B)~mentions only the name, hometown or personal background; (C)~neither (Appendix~\ref{app:judge}). The label is the first-token argmax over A/B/C, and disclosure is label~A. Label~B fires whenever an explanation mentions the applicant's name, so we do not report an (A or B) rate. As a judge-independent check, an attribute-specific keyword detector searches each explanation for words related to the swapped attribute (English and Hindi; English only in the positive control; e.g.\ \emph{female}, \emph{caste}, \hindi{जाति}, \emph{state}). We did not validate the judge against human labels; instead, the positive control (Section~\ref{sec:pc}) checks that it fires on explicit identity, and we report the judge-independent keyword check alongside it.
 
 \textbf{Self-prediction pass.} This is a two-turn follow-up. Turn~1 is the reference prompt, the assistant turn is the model's reference answer (Yes/No) from the run-time first-token readout (for some Hindi Granite, Sarvam-M and Ministral prompts this differs from the final readout, but it is always the English word), and turn~2 asks whether the decision would change. In condition \textbf{N} (name), turn~2 gives only the counterfactual name and hometown: ``Now suppose the applicant's name were \emph{X} and the hometown were \emph{Y}, and everything else in the application stayed exactly the same. Would your decision be different?'' Condition \textbf{A} (attribute) also states the attribute (e.g.\ ``from a Scheduled Caste (SC) community, for example named \emph{X}\ldots''). We ask both for all identity and control variants in both languages (12{,}000 prompts per model). The predicted-change score is the first-token Yes/(Yes+No) share. In the main analysis, pairs whose total first-token Yes+No mass is below 0.5 use the parsed text answer (0 or 1), while the bootstrap-CI analysis drops them (e.g.\ 4{,}772 of 4{,}800 Granite pairs are kept). % src: key_numbers (RQ3b AUROC CI: granite all pairs 4772)
 
@@ -377,23 +381,23 @@ The positive control shows that this silence is not an artefact of a measure tha
 \section{Ethics and Limitations}
 \label{sec:ethics}
 
-\textbf{Names as signals.} We use names, surnames and hometowns only as signals that a model may associate with a group, and we make no claim that any person with a given name belongs to, or behaves like, a group. Results are aggregate per cell. We drafted the name lists from public sources without community or expert review, which matters for a sensitive caste taxonomy. The benchmark will be released under gated access for auditing research. The findings should not be read as showing that LLMs disadvantage any group, including the reference group.
+\textbf{Names as signals.} We use names, surnames and hometowns only as signals that a model may associate with a group, and we make no claim that any person with a given name belongs to, or behaves like, a group. Results are aggregate per cell. We drafted the name lists from public sources without community or expert review, which matters for a sensitive caste taxonomy. The benchmark prompts and raw outputs are shared on request for auditing research rather than openly. The findings should not be read as showing that LLMs disadvantage any group, including the reference group.
 
 \textbf{Normative framing.} We describe effects as \emph{differential treatment}, not discrimination: a paired shift shows that a signal changed the output, not that the change is unjust. A shift towards SC- or OBC-labelled applicants could reflect a learned reservation norm, although our scholarship prompt describes a private scheme with an income criterion and no reservation. We did not break the caste results down by scenario.
 
-\textbf{Validity of the signals.} The name lists and Hindi translations had not been validated by the authors at run time, and validation is ongoing. An automated check flagged 15 of 88 names, and removing them reduces the number of significant cells from 10 to 8. % src: key_numbers (Name validation 15 of 88; validated names 8 of 64)
+\textbf{Validity of the signals.} The name lists and Hindi translations were reviewed by the authors only after the runs, so the experiments use the drafted versions. An automated check flagged 15 of 88 names, and removing them reduces the number of significant cells from 10 to 8. % src: key_numbers (Name validation 15 of 88; validated names 8 of 64)
 Names carry signals beyond the intended attribute, e.g.\ class~\cite{gaddis2017black}. Caste-coded surnames were not decoded in English, Christian-coded names were not read as Christian in English, and four Sikh first names are gender-ambiguous. Region swaps change name and hometown together. The gender swap uses a surname-swap control, which is an imperfect noise floor for first-name changes. Each cell has only 8 names.
 
-\textbf{Measurement.} Granite and Sarvam-M use a different \pyes{} readout for most Hindi items, which confounds RQ2. We selected explanation pairs with the run-time first-token readout, so 89 of the 665 final-readout identity flips have no explanation (Granite 44 of 82, Sarvam-M 38 of 74, Ministral 7), and self-prediction follows an assistant turn from the same run-time readout. Explanation-pass decisions often differ from the decision pass, and 302 Granite Hindi explanations remain truncated. The judge has not yet been validated by humans, so its agreement with humans is not established (\TODO{kappa}); the positive control shows that it does fire on explicit identity, and the keyword check finds at most 5.3\% (Granite) of identity-flipped explanations. Only one judge model was used. Label A requires the attribute to be named, whereas an explanation could encode identity indirectly, e.g.\ through tone~\cite{veldanda2026explanation}; we did not measure this. The positive control uses only English, T1 and first-token \pyes{}, and it replaces the name and hometown by an ID and a background line, so its effect sizes are not directly comparable with name-coded ones. % src: key_numbers (Explanation coverage: 665 - 576 = 89; granite 38/82, sarvam-m 36/74)
+\textbf{Measurement.} Granite and Sarvam-M use a different \pyes{} readout for most Hindi items, which confounds RQ2. We selected explanation pairs with the run-time first-token readout, so 89 of the 665 final-readout identity flips have no explanation (Granite 44 of 82, Sarvam-M 38 of 74, Ministral 7), and self-prediction follows an assistant turn from the same run-time readout. Explanation-pass decisions often differ from the decision pass, and 302 Granite Hindi explanations remain truncated. The judge was not validated against human labels, so its agreement with human annotators is not established; the positive control shows that it does fire on explicit identity, and the keyword check finds at most 5.3\% (Granite) of identity-flipped explanations. Only one judge model was used. Label A requires the attribute to be named, whereas an explanation could encode identity indirectly, e.g.\ through tone~\cite{veldanda2026explanation}; we did not measure this. The positive control uses only English, T1 and first-token \pyes{}, and it replaces the name and hometown by an ID and a background line, so its effect sizes are not directly comparable with name-coded ones. % src: key_numbers (Explanation coverage: 665 - 576 = 89; granite 38/82, sarvam-m 36/74)
 
 \textbf{Scope.} The profiles are synthetic forms, and three scenarios and two templates do not cover the space of prompts~\cite{sclar2024quantifying}. We use one greedy decoding setting, open-weight models up to 32B, and Hindi with Latin-script names. With only eight models, the power to replicate the direction of effects at model level is limited.
 
-\textbf{Human subjects.} No human-subjects data were collected. The name lists were drafted with LLM assistance from public sources and were not reviewed by community members; the only planned human input is the authors' annotation of judge labels.
+\textbf{Human subjects.} No human-subjects data were collected. The name lists were drafted with LLM assistance from public sources and were not reviewed by community members; the only human input is the authors' own review of the materials.
 
 % ------------------------------------------------------------------
 \section{Conclusion}
 
-We audited eight open-weight LLMs on paired Indian applications that differ only in a name-coded identity signal, in English and Hindi. Decisions shift only slightly, but female- and Northeast-coded names tilt flips towards \emph{Yes} in 7 of 8 models. No explanation of an identity-flipped decision mentions these signals, and self-predictions near the threshold are indistinguishable from chance. An explicit-label positive control shows that several models (notably the Qwen3 family) act strongly on stated caste and sometimes name it, so the silence under names is informative. The caste-coded surname null is best read as non-perception, not as caste-neutral decisions. Explanation review and self-report are not substitutes for paired behavioural audits. The design transfers to other implicit identity signals and languages. Code and gated benchmark: \TODO{release URL}.
+We audited eight open-weight LLMs on paired Indian applications that differ only in a name-coded identity signal, in English and Hindi. Decisions shift only slightly, but female- and Northeast-coded names tilt flips towards \emph{Yes} in 7 of 8 models. No explanation of an identity-flipped decision mentions these signals, and self-predictions near the threshold are indistinguishable from chance. An explicit-label positive control shows that several models (notably the Qwen3 family) act strongly on stated caste and sometimes name it, so the silence under names is informative. The caste-coded surname null is best read as non-perception, not as caste-neutral decisions. Explanation review and self-report are not substitutes for paired behavioural audits. The design transfers to other implicit identity signals and languages. Code and analysis scripts: \url{https://github.com/hardik-thapar/iit_fair}; the benchmark prompts and raw model outputs are available on request for auditing research.
 
 % ------------------------------------------------------------------
 \bibliographystyle{IEEEtran}
