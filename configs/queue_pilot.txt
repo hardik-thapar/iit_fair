@@ -1,0 +1,2 @@
+# task model estimate_min [extra args]
+run_model qwen3-4b 6 --pilot

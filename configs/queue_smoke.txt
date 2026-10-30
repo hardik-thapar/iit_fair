@@ -1,0 +1,6 @@
+# task model estimate_min
+smoke ministral-3-8b 4
+smoke olmo-3-7b 4
+smoke granite-3.3-8b 4
+smoke sarvam-m 5
+smoke qwen3-4b 3

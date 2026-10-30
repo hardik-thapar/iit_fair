@@ -10,11 +10,26 @@ import re
 import sys
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCES = ["refs_decisions.bib", "refs_india.bib", "refs_faithfulness.bib"]
+SOURCES = ["refs_decisions.bib", "refs_india.bib", "refs_faithfulness.bib", "refs_added.bib"]
+
+# Keys dropped from the merged output (duplicates of another key).
+DROP = {"phutane2025ableist"}  # superseded by phutane2026ableist (AIES 2026 version)
+
+# Manual verification overrides: applied after the automatic check, so re-runs are reproducible.
+# Each value overrides status/score/source (and remote_title if given) for that key.
+MANUAL = {
+    "bertrand2004emily": {"status": "ok", "score": "manual", "source": "doi:10.1257/0002828042002561 (manual)"},
+    "wang2024large": {"status": "ok", "score": "manual", "source": "doi:10.18653/v1/2024.acl-long.511 (manual)"},
+    "kusner2017counterfactual": {"status": "ok", "score": "manual", "source": "papers.nips.cc page title (manual)"},
+    "bowen2025measuring": {"status": "ok", "score": "manual", "source": "ideas.repec.org page title (manual)"},
+    "zaveri2025caste": {"status": "partial", "score": "manual",
+                        "source": "OpenAlex title+authors match; IIMB PDF 403 on recheck, method details unconfirmed"},
+}
 
 
 def split_entries(text):
@@ -38,10 +53,16 @@ def norm(s):
     return re.sub(r"[^a-z0-9 ]", " ", s).split()
 
 
-def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "fairaudit-refcheck/0.1 (mailto:research@example.org)"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8", "replace")
+def get(url, tries=5):
+    req = urllib.request.Request(url, headers={"User-Agent": "fairaudit-refcheck/0.1"})
+    for i in range(tries):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:  # back off on rate limiting, otherwise fail
+            if e.code != 429 or i == tries - 1:
+                raise
+            time.sleep(5 * (i + 1))
 
 
 def remote_title(entry):
@@ -75,6 +96,8 @@ def main():
             # keep the longer (more complete) version of a duplicated key
             if key not in merged or len(raw) > len(merged[key]):
                 merged[key] = raw
+    for key in DROP:
+        merged.pop(key, None)
     rows = []
     for key, raw in sorted(merged.items()):
         title = field(raw, "title")
@@ -84,8 +107,12 @@ def main():
             src, rt = "error", str(e)[:80]
         score = difflib.SequenceMatcher(None, " ".join(norm(title)), " ".join(norm(rt))).ratio() if rt else 0.0
         status = "ok" if score >= 0.9 else ("check" if rt else "no_id")
-        rows.append({"key": key, "status": status, "score": round(score, 2), "source": src,
-                     "bib_title": title, "remote_title": rt})
+        row = {"key": key, "status": status, "score": round(score, 2), "source": src,
+               "bib_title": title, "remote_title": rt}
+        if key in MANUAL:  # manual check takes precedence
+            row.update(MANUAL[key])
+            status = row["status"]
+        rows.append(row)
         print(f"{status:6} {score:.2f} {key}", file=sys.stderr)
         time.sleep(1)
     with open(ROOT / "lit" / "ref_check.csv", "w", newline="") as f:

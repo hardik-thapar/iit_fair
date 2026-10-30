@@ -6,7 +6,7 @@ armstrong2024silicon,ok,1.0,doi:10.1145/3689904.3694699,The Silicon Ceiling: Aud
 atanasova2023faithfulness,ok,1.0,doi:10.18653/v1/2023.acl-short.25,Faithfulness Tests for Natural Language Explanations,Faithfulness Tests for Natural Language Explanations
 banerjee2009labor,ok,1.0,doi:10.1016/j.jce.2008.09.002,Labor market discrimination in {Delhi}: Evidence from a field experiment,Labor market discrimination in Delhi: Evidence from a field experiment
 bavaresco2025llms,ok,1.0,doi:10.18653/v1/2025.acl-short.20,{LLMs} instead of Human Judges? A Large Scale Empirical Study across 20 {NLP} Evaluation Tasks,LLMs instead of Human Judges? A Large Scale Empirical Study across 20 NLP Evaluation Tasks
-bertrand2004emily,ok,manual,doi:10.1257/0002828042002561 (manual),Are {Emily} and {Greg} More Employable Than {Lakisha} and {Jamal}? {A} Field Experiment on Labor Market Discrimination,HTTP Error 429: Too Many Requests
+bertrand2004emily,ok,manual,doi:10.1257/0002828042002561 (manual),Are {Emily} and {Greg} More Employable Than {Lakisha} and {Jamal}? {A} Field Experiment on Labor Market Discrimination,Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination
 bhatt2022recontextualizing,ok,1.0,doi:10.18653/v1/2022.aacl-main.55,Re-contextualizing Fairness in {NLP}: The Case of {India},Re-contextualizing Fairness in NLP: The Case of India
 binder2025looking,ok,1.0,arxiv:2410.13787,Looking Inward: Language Models Can Learn About Themselves by Introspection,Looking Inward: Language Models Can Learn About Themselves by Introspection
 bowen2025measuring,ok,manual,ideas.repec.org page title (manual),Measuring and Mitigating Racial Disparities in Large Language Model Mortgage Underwriting,
@@ -14,6 +14,8 @@ chaudhary2025certifying,ok,1.0,arxiv:2405.18780,Certifying Counterfactual Bias i
 chen2024models,ok,1.0,arxiv:2307.08678,Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations,Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations
 chen2025reasoning,ok,1.0,arxiv:2505.05410,Reasoning Models Don't Always Say What They Think,Reasoning Models Don't Always Say What They Think
 christian2026self,ok,1.0,arxiv:2601.14553,Self-Blinding and Counterfactual Self-Simulation Mitigate Biases and Sycophancy in Large Language Models,Self-Blinding and Counterfactual Self-Simulation Mitigate Biases and Sycophancy in Large Language Models
+dammu2024uncultured,ok,1.0,doi:10.18653/v1/2024.emnlp-main.1134,``They are uncultured'': Unveiling Covert Harms and Social Threats in {LLM} Generated Conversations,“They are uncultured”: Unveiling Covert Harms and Social Threats in LLM Generated Conversations
+gaddis2017black,ok,1.0,doi:10.15195/v4.a19,How Black Are {Lakisha} and {Jamal}? {Racial} Perceptions from Names Used in Correspondence Audit Studies,How Black Are Lakisha and Jamal? Racial Perceptions from Names Used in Correspondence Audit Studies
 gamboa2025social,ok,1.0,doi:10.18653/v1/2025.emnlp-main.1416,Social Bias in Multilingual Language Models: A Survey,Social Bias in Multilingual Language Models: A Survey
 gao2026llms,ok,1.0,arxiv:2606.28978,Can {LLMs} Hire Fairly? {R}acial Bias in Resume Screening,Can LLMs Hire Fairly? Racial Bias in Resume Screening
 garg2019counterfactual,ok,1.0,doi:10.1145/3306618.3317950,Counterfactual Fairness in Text Classification through Robustness,Counterfactual Fairness in Text Classification through Robustness
@@ -24,6 +26,7 @@ hada2024akal,ok,1.0,arxiv:2405.06346,Akal Badi ya Bias: An Exploratory Study of 
 huang2020reducing,ok,1.0,doi:10.18653/v1/2020.findings-emnlp.7,Reducing Sentiment Bias in Language Models via Counterfactual Evaluation,Reducing Sentiment Bias in Language Models via Counterfactual Evaluation
 karvonen2025robustly,ok,1.0,arxiv:2506.10922,Robustly Improving {LLM} Fairness in Realistic Settings via Interpretability,Robustly Improving LLM Fairness in Realistic Settings via Interpretability
 khandelwal2024indian,ok,1.0,arxiv:2309.08573,{Indian-BhED}: A Dataset for Measuring {India}-Centric Biases in Large Language Models,Indian-BhED: A Dataset for Measuring India-Centric Biases in Large Language Models
+kumar2019caste,ok,1.0,doi:10.1080/00220388.2018.1425397,Caste and Credit: A Woeful Tale?,Caste and Credit: A Woeful Tale?
 kusner2017counterfactual,ok,manual,papers.nips.cc page title (manual),Counterfactual Fairness,
 lanham2023measuring,ok,1.0,arxiv:2307.13702,Measuring Faithfulness in Chain-of-Thought Reasoning,Measuring Faithfulness in Chain-of-Thought Reasoning
 madsen2024self,ok,1.0,acl:2024.findings-acl.19,Are self-explanations from Large Language Models faithful?,Are self-explanations from Large Language Models faithful?
@@ -39,8 +42,12 @@ prabhakaran2019perturbation,ok,1.0,doi:10.18653/v1/D19-1578,Perturbation Sensiti
 rao2025invisible,ok,1.0,arxiv:2508.16673,Invisible Filters: Cultural Bias in Hiring Evaluations Using Large Language Models,Invisible Filters: Cultural Bias in Hiring Evaluations Using Large Language Models
 sahoo2024indibias,ok,1.0,doi:10.18653/v1/2024.naacl-long.487,{IndiBias}: A Benchmark Dataset to Measure Social Biases in Language Models for {Indian} Context,IndiBias: A Benchmark Dataset to Measure Social Biases in Language Models for Indian Context
 salinas2024whats,ok,1.0,arxiv:2402.14875,What's in a Name? {A}uditing Large Language Models for Race and Gender Bias,What's in a Name? Auditing Large Language Models for Race and Gender Bias
+sambasivan2021reimagining,ok,1.0,arxiv:2101.09995,Re-imagining Algorithmic Fairness in {India} and Beyond,Re-imagining Algorithmic Fairness in India and Beyond
+sclar2024quantifying,ok,1.0,arxiv:2310.11324,Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design or: How {I} Learned to Start Worrying about Prompt Formatting,Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design or: How I learned to start worrying about prompt formatting
+selvam2023tail,ok,1.0,doi:10.18653/v1/2023.acl-short.118,The Tail Wagging the Dog: Dataset Construction Biases of Social Bias Benchmarks,The Tail Wagging the Dog: Dataset Construction Biases of Social Bias Benchmarks
 seshadri2025small,ok,1.0,arxiv:2501.04316,"Small Changes, Large Consequences: Analyzing the Allocational Fairness of {LLMs} in Hiring Contexts","Small Changes, Large Consequences: Analyzing the Allocational Fairness of LLMs in Hiring Contexts"
 seth2025deep,ok,1.0,arxiv:2508.03712,How Deep Is Representational Bias in {LLMs}? The Cases of Caste and Religion,How Deep Is Representational Bias in LLMs? The Cases of Caste and Religion
+siddique2011evidence,ok,1.0,doi:10.1016/j.labeco.2011.07.002,Evidence on Caste Based Discrimination,Evidence on Caste Based Discrimination
 siegel2024probabilities,ok,1.0,doi:10.18653/v1/2024.acl-short.49,The Probabilities Also Matter: A More Faithful Metric for Faithfulness of Free-Text Explanations in Large Language Models,The Probabilities Also Matter: A More Faithful Metric for Faithfulness of Free-Text Explanations in Large Language Models
 siegel2025verbosity,ok,1.0,arxiv:2503.13445,Verbosity Tradeoffs and the Impact of Scale on the Faithfulness of {LLM} Self-Explanations,Verbosity Tradeoffs and the Impact of Scale on the Faithfulness of LLM Self-Explanations
 singh2026inspect,ok,1.0,arxiv:2607.25375,Inspect {India} Evals: An Open Benchmarking Framework for Evaluating Large Language Models in the {Indian} Linguistic and Cultural Context,Inspect India Evals: An Open Benchmarking Framework for Evaluating Large Language Models in the Indian Linguistic and Cultural Context
@@ -52,7 +59,8 @@ turpin2023language,ok,1.0,arxiv:2305.04388,Language Models Don't Always Say What
 vashishtha2023evaluating,ok,1.0,doi:10.18653/v1/2023.findings-acl.21,On Evaluating and Mitigating Gender Biases in Multilingual Settings,On Evaluating and Mitigating Gender Biases in Multilingual Settings
 veldanda2026explanation,ok,1.0,arxiv:2605.08671,Explanation Fairness in Large Language Models: An Empirical Analysis of Disparities in How {LLMs} Justify Decisions Across Demographic Groups,Explanation Fairness in Large Language Models: An Empirical Analysis of Disparities in How LLMs Justify Decisions Across Demographic Groups
 vijayaraghavan2025decaste,ok,1.0,arxiv:2505.14971,{DECASTE}: Unveiling Caste Stereotypes in Large Language Models through Multi-Dimensional Bias Analysis,DECASTE: Unveiling Caste Stereotypes in Large Language Models through Multi-Dimensional Bias Analysis
-wang2024large,ok,manual,doi:10.18653/v1/2024.acl-long.511 (manual),Large Language Models are not Fair Evaluators,HTTP Error 429: Too Many Requests
+wang2024answer,ok,1.0,doi:10.18653/v1/2024.findings-acl.441,``My Answer is {C}'': First-Token Probabilities Do Not Match Text Answers in Instruction-Tuned Language Models,“My Answer is C”: First-Token Probabilities Do Not Match Text Answers in Instruction-Tuned Language Models
+wang2024large,ok,manual,doi:10.18653/v1/2024.acl-long.511 (manual),Large Language Models are not Fair Evaluators,Large Language Models are not Fair Evaluators
 wilson2024gender,ok,1.0,arxiv:2407.20371,"Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval","Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval"
 zaveri2025caste,partial,manual,"OpenAlex title+authors match; IIMB PDF 403 on recheck, method details unconfirmed",Caste And Occupational Identity In Large Language Models,
 zheng2023judging,ok,1.0,arxiv:2306.05685,Judging {LLM}-as-a-Judge with {MT-Bench} and Chatbot Arena,Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena

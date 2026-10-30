@@ -1,0 +1,81 @@
+{
+ "_note": "Official repos only (team decision 2026-10-30). Revisions are the exact HF commits downloaded on 2026-10-30.",
+ "qwen3-4b": {
+  "hf_id": "Qwen/Qwen3-4B",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "family": "Qwen3",
+  "size_b": 4,
+  "role": "audit",
+  "chat_template_kwargs": {
+   "enable_thinking": false
+  }
+ },
+ "qwen3-8b": {
+  "hf_id": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "family": "Qwen3",
+  "size_b": 8,
+  "role": "audit",
+  "chat_template_kwargs": {
+   "enable_thinking": false
+  }
+ },
+ "qwen3-14b": {
+  "hf_id": "Qwen/Qwen3-14B",
+  "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "family": "Qwen3",
+  "size_b": 14,
+  "role": "audit",
+  "chat_template_kwargs": {
+   "enable_thinking": false
+  }
+ },
+ "qwen3-32b": {
+  "hf_id": "Qwen/Qwen3-32B",
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "family": "Qwen3",
+  "size_b": 32,
+  "role": "audit",
+  "chat_template_kwargs": {
+   "enable_thinking": false
+  }
+ },
+ "granite-3.3-8b": {
+  "hf_id": "ibm-granite/granite-3.3-8b-instruct",
+  "revision": "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+  "family": "Granite",
+  "size_b": 8,
+  "role": "audit"
+ },
+ "olmo-3-7b": {
+  "hf_id": "allenai/Olmo-3-7B-Instruct",
+  "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+  "family": "OLMo",
+  "size_b": 7,
+  "role": "audit"
+ },
+ "sarvam-m": {
+  "hf_id": "sarvamai/sarvam-m",
+  "revision": "01534a53c46f2788e392dbb3d994e0fa8f04d3fd",
+  "family": "Sarvam",
+  "size_b": 24,
+  "role": "audit",
+  "chat_template_kwargs": {
+   "enable_thinking": false
+  }
+ },
+ "ministral-8b": {
+  "hf_id": "mistralai/Ministral-8B-Instruct-2410",
+  "revision": "2f494a194c5b980dfb9772cb92d26cbb671fce5a",
+  "family": "Mistral",
+  "size_b": 8,
+  "role": "audit"
+ },
+ "mistral-small-24b-judge": {
+  "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+  "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+  "family": "Mistral",
+  "size_b": 24,
+  "role": "judge"
+ }
+}
