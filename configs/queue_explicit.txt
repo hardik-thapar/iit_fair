@@ -1,0 +1,10 @@
+# task model estimate_min  (positive control: explicit identity labels, English T1; qwen3-4b first as pilot)
+run_explicit qwen3-4b 4
+run_explicit qwen3-8b 4
+run_explicit granite-3.3-8b 4
+run_explicit olmo-3-7b 4
+run_explicit ministral-8b 4
+run_explicit qwen3-14b 5
+run_explicit sarvam-m 6
+run_explicit qwen3-32b 8
+run_judge mistral-small-24b-judge 6

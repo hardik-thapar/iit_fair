@@ -32,7 +32,7 @@ def main():
     for name, cfg in models.items():
         if name.startswith("_") or cfg.get("role") != "audit":
             continue
-        for fname, tag in [("explain.jsonl", ""), ("explain_long.jsonl", "|long")]:
+        for fname, tag in [("explain.jsonl", ""), ("explain_long.jsonl", "|long"), ("explicit_explain.jsonl", "")]:
             f = ROOT / "results" / "raw" / name / fname
             if not f.exists():
                 continue
